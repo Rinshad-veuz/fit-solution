@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fit Solution</title>
+  <link rel="stylesheet" href="assets/css/aos.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/font-awesome.css">
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/fonts/webfont/stylesheet.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="assets/img/fav.png" type="image/png">
+
+
+  <style>
+    .nsd-menu-overlay {
+      visibility: hidden;
+      /* Initially hidden */
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      /* Fade in effect */
+    }
+
+    .nsd-menu-overlay.active {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- body cursor -->
+  <div class="cursor"></div>
+  <div class="cursor2"></div>
+  <!-- body cursor -->
+
+  <!-- to top div -->
+  <button id="toTopBtn">
+    <img src="assets/img/arrow-right.svg" alt="">
+  </button>
+  <!-- to top div -->
+
+
+  <!-- ==================== Start Loading ==================== -->
+  <div class="loader-wrap">
+    <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+      <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+    </svg>
+
+    <div class="loader-wrap-heading">
+      <!-- Add the image here -->
+      <img src="assets/img/fit-loader.gif" alt="Loader Image" class="loader-image">
+      <div class="load-text">
+        <span>F</span>
+        <span>I</span>
+        <span>T</span>
+        <span>S</span>
+        <span>O</span>
+        <span>L</span>
+        <span>U</span>
+        <span>T</span>
+        <span>I</span>
+        <span>O</span>
+        <span>N</span>
+        <span>S</span>
+      </div>
+    </div>
+  </div>
+  <!-- ==================== End Loading ==================== -->
+
+  <!-- banner start-->
+  <div class="banner">
+
+    <!-- nav start -->
+    <div class="nsd-menu-overlay z-20">
+      <div class="container m-auto py-10">
+        <div class="nsd-menu-overlay__content flex flex-wrap overflow-hidden nsd-menu-main">
+          <div class="nsd-menu-overlay__content_part nsd-menu-overlay__content_part__left menu-ab-custom">
+            <ul class="nsd-menu-fullscren">
+              <li class="fullscreen-single__item "><a href="index.html" class="__active">Home</a></li>
+              <li class="fullscreen-single__item"><a href="about.html">About us</a></li>
+              <li class="fullscreen-single__item"><a href="portfolio.html">Portfolio</a></li>
+              <li class="fullscreen-single__item has-sub menu-item-has-children">
+                <a href="javascript:void(0)">
+                  <span>Services</span> <span class="menu-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                </a>
+                <ul class="sub-menu">
+                  <li class="sub-menu__inner">
+                    <a href="service.html">
+                      <span>Website Development</span>
+                    </a>
+                  </li>
+                  <li class="sub-menu__inner">
+                    <a href="service.html">
+                      <span>Aramco CCC+</span>
+                    </a>
+                  </li>
+                  <li class="sub-menu__inner">
+                    <a href="service.html">
+                      <span>UI/UX Design</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="fullscreen-single__item"><a href="contact.html">Contacts</a></li>
+            </ul>
+
+            <div class="sm-show-btn">
+              <div class="main-button">
+                <div class="main-button">
+                  <a href="enquiry.html" class="button">
+                    <span class="button__spotlight"></span>
+                    <span class="button__wrapper">
+                      <span class="button__text">Request a Quote <img src="assets/img/arrow-right.svg" alt=""
+                          class="button-arrow"></span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <div id="navbar">
+        <div class="container">
+          <div class="nav-box">
+            <a href="index.html">
+              <img src="assets/img/logo.png" alt="" class="logo-width">
+            </a>
+
+            <div class="nav-right-box">
+              <div class="menu-toggle">
+                <div class="hamburger">
+                  <span class="menu-icon-w"></span>
+                  <span></span>
+                  <span class="menu-icon-w-2"></span>
+                </div>
+                <div class="cross">
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+              <div class="main-button">
+                <a href="enquiry.html" class="button">
+                  <span class="button__spotlight"></span>
+                  <span class="button__wrapper">
+                    <span class="button__text">Request a Quote <img src="assets/img/arrow-right.svg" alt=""
+                        class="button-arrow"></span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- nav start -->
+
+    <div class="container">
+      <div class="banner-text">
+        <h3 class="cursor-scale small">
+          The Ultimate Digital Experiences <br>
+          in <span id="word"></span>
+        </h3>
+        <p>
+          As a leading software development company operating in Bahrain and India, we offer an array of services <br>
+          tailored to enhance your business.
+        </p>
+
+        <div class="main-button">
+          <a href="#" class="button">
+            <span class="button__spotlight"></span>
+            <span class="button__wrapper">
+              <span class="button__text">Start Explore <img src="assets/img/arrow-right.svg" alt=""
+                  class="button-arrow"></span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <section class="slider-section">
+      <div class="wheel">
+        <div class="wheel__card">
+          <img src="assets/img/slider-1.png" />
+          <h2 class="wheel-title">Service Name</h2>
+        </div>
+        <div class="wheel__card">
+          <img src="assets/img/slider-2.png" />
+          <h2 class="wheel-title">Service Name</h2>
+
+        </div>
+        <div class="wheel__card">
+          <img src="assets/img/slider-3.png" />
+          <h2 class="wheel-title">Service Name</h2>
+        </div>
+        <div class="wheel__card">
+          <img src="assets/img/slider-4.png" />
+          <h2 class="wheel-title">Service Name</h2>
+        </div>
+        <div class="wheel__card">
+          <img src="assets/img/slider-5.png" />
+          <h2 class="wheel-title">Service Name</h2>
+        </div>
+
+
+        <div class="wheel__card">
+          <img src="assets/img/slider-1.png" />
+          <h2 class="wheel-title">Service Name</h2>
+        </div>
+        <div class="wheel__card">
+          <img src="assets/img/slider-2.png" />
+          <h2 class="wheel-title">Service Name</h2>
+
+        </div>
+        <div class="wheel__card">
+          <img src="assets/img/slider-3.png" />
+          <h2 class="wheel-title">Service Name</h2>
+        </div>
+        <div class="wheel__card">
+          <img src="assets/img/slider-4.png" />
+          <h2 class="wheel-title">Service Name</h2>
+        </div>
+        <div class="wheel__card">
+          <img src="assets/img/slider-5.png" />
+          <h2 class="wheel-title">Service Name</h2>
+        </div>
+
+        <div class="wheel__card">
+          <img src="assets/img/slider-1.png" />
+          <h2 class="wheel-title">Service Name</h2>
+        </div>
+        <div class="wheel__card">
+          <img src="assets/img/slider-2.png" />
+          <h2 class="wheel-title">Service Name</h2>
+
+        </div>
+        <div class="wheel__card">
+          <img src="assets/img/slider-3.png" />
+          <h2 class="wheel-title">Service Name</h2>
+        </div>
+        <div class="wheel__card">
+          <img src="assets/img/slider-4.png" />
+          <h2 class="wheel-title">Service Name</h2>
+        </div>
+        <div class="wheel__card">
+          <img src="assets/img/slider-5.png" />
+          <h2 class="wheel-title">Service Name</h2>
+        </div>
+      </div>
+    </section>
+
+    <div class="banner-abstract">
+      <img src="assets/img/home-ab.png" alt="" class="banner-glass-ab">
+    </div>
+
+  </div>
+  <!-- banner end -->
+
+
+
+  <section class="about">
+    <!-- marquee -->
+    <div class="marquee-row marquee-first">
+      <div class="marquee-block marquee">
+        <ul class="marquee-item-list">
+          <li>UI/UX DEsign <span><img src="assets/img/flat-fav.png" alt=""></span></li>
+          <li>Website Hosting <span><img src="assets/img/flat-fav.png" alt=""></span></li>
+          <li>odoo erp <span><img src="assets/img/flat-fav.png" alt=""></span></li>
+
+          <li>cyber security <span><img src="assets/img/flat-fav.png" alt=""></span></li>
+          <li>Branding and design <span><img src="assets/img/flat-fav.png" alt=""></span></li>
+          <li>Website Hosting <span><img src="assets/img/flat-fav.png" alt=""></span></li>
+
+          <li>BRANDING <span><img src="assets/img/flat-fav.png" alt=""></span></li>
+          <li>UI/UX DEsign <span><img src="assets/img/flat-fav.png" alt=""></span></li>
+          <li>Website Hosting <span><img src="assets/img/flat-fav.png" alt=""></span></li>
+        </ul>
+      </div>
+    </div>
+    <!-- marquee -->
+
+    <div class="dwc-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-6">
+            <div class="dwc-section-box" data-aos="fade-up" data-aos-duration="1000">
+              <img src="assets/img/design.gif" alt="">
+              <h5>Designs</h5>
+              <p>Design that innovates</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="dwc-section-box" data-aos="fade-up" data-aos-duration="2000">
+              <img src="assets/img/words.gif" alt="">
+              <h5>Words</h5>
+              <p>We bring words to life</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="dwc-section-box" data-aos="fade-up" data-aos-duration="3000">
+              <img src="assets/img/codes.gif" alt="">
+              <h5>Codes</h5>
+              <p>We code the future</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <div class="col-lg-5" data-aos="fade-right" data-aos-duration="3000">
+          <div class="about-st-img">
+            <img src="assets/img/about-img.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="section-title">
+            <h4>ABOUT US</h4>
+            <h2 class="reveal-type" data-bg-color="#ffffff1c" data-fg-color="#fff">Software Development <br>
+              Company in Bahrain</h2>
+          </div>
+          <p class="main-para">As a leading software development company operating in Bahrain and India,
+            we offer an array of services tailored to enhance your business. From
+            securing your organization's endpoints to crafting effective digital marketing
+            strategies that boost your brand, we serve as the ideal IT solution you've
+            been seeking. While our primary focus is in Bahrain, we extend our services
+            globally, welcoming clients from around the world. Backed by a team of
+            industry-leading experts, we ensure professional handling of all entrusted
+            projects.</p>
+
+          <div class="main-button">
+            <a href="#" class="button">
+              <span class="button__spotlight"></span>
+              <span class="button__wrapper">
+                <span class="button__text">View More <img src="assets/img/arrow-right.svg" alt=""
+                    class="button-arrow"></span>
+              </span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- clients -->
+  <section class="cleint-main">
+    <img src="assets/img/rotating-img.svg" alt="" id="rotatingImage" class="cl-rotating-1">
+    <div class="container" data-aos="zoom-in" data-aos-duration="3000">
+      <div class="cleint-section">
+        <div class="row g-0 row-cols-2 row-cols-sm-2 row-cols-md-4 row-cols-lgg-5 row-cols-xl-5 justify-content-center">
+          <div class="col">
+            <div class="logo-box">
+              <img src="assets/img/logos/cl-1.png" alt="">
+            </div>
+          </div>
+          <div class="col">
+            <div class="logo-box logo-box-st">
+              <img src="assets/img/logos/cl-2.png" alt="">
+            </div>
+          </div>
+          <div class="col">
+            <div class="logo-box">
+              <img src="assets/img/logos/cl-3.png" alt="">
+            </div>
+          </div>
+          <div class="col">
+            <div class="logo-box logo-box-st">
+              <img src="assets/img/logos/cl-4.png" alt="">
+            </div>
+          </div>
+          <div class="col">
+            <div class="logo-box">
+              <img src="assets/img/logos/cl-5.png" alt="">
+            </div>
+          </div>
+          <div class="col">
+            <div class="logo-box logo-box-st">
+              <img src="assets/img/logos/cl-5.png" alt="">
+            </div>
+          </div>
+          <div class="col">
+            <div class="logo-box">
+              <img src="assets/img/logos/cl-4.png" alt="">
+            </div>
+          </div>
+          <div class="col">
+            <div class="logo-box logo-box-st">
+              <img src="assets/img/logos/cl-1.png" alt="">
+            </div>
+          </div>
+          <div class="col">
+            <div class="logo-box">
+              <img src="assets/img/logos/cl-2.png" alt="">
+            </div>
+          </div>
+          <div class="col">
+            <div class="logo-box logo-box-st">
+              <img src="assets/img/logos/cl-1.png" alt="">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- clients -->
+  <!-- Why Choose Us -->
+  <section class="why-choose-us">
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <div class="col-lg-4" data-aos="fade-right" data-aos-duration="3000">
+          <div class="why-choose-img">
+            <img src="assets/img/why-choose-img.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="section-title">
+            <h2 class="reveal-type" data-bg-color="#ffffff1c" data-fg-color="#fff">Why Choose Us
+            </h2>
+          </div>
+          <p class="main-para">Over a decade of experience with thousands of
+            Satisfied customers. Our agile teams are dedicated
+            And skilled across different industries.</p>
+
+        </div>
+        <div class="col-lg-4">
+          <div class="counter-container" data-aos="zoom-in" data-aos-duration="1500">
+            <div class="counter-main">
+              <div class="counter-box">
+                <div class="counter" data-target="100" data-count="+">0</div>
+                <h6>Happy Customers</h6>
+              </div>
+            </div>
+
+            <div class="counter-main ct-m-3">
+              <div class="counter-box">
+                <div class="counter" data-target="16" data-count="+">0</div>
+                <h6>years Experience</h6>
+              </div>
+
+              <div class="counter-box">
+                <div class="counter" data-target="300" data-count="+">0</div>
+                <h6>Employees</h6>
+              </div>
+            </div>
+
+            <div class="counter-main">
+              <div class="counter-box ">
+                <div class="counter counter-no-data" data-target="08" data-count="+">0</div>
+                <h6>Branches</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Why Choose Us -->
+
+  <!-- bg -->
+  <section class="parallax-bg"></section>
+  <!-- bg -->
+
+  <!-- service -->
+<section class="service-section">
+  <div class="container">
+    <div class="row">
+      <!-- Fixed Heading Section -->
+      <div class="col-lg-6">
+        <div class="section-title">
+          <h4>Services</h4>
+          <h2 class="reveal-type" data-bg-color="#ffffff1c" data-fg-color="#fff">
+            FIT SOLUTIONS is a design and development firm in <br> Bahrain
+          </h2>
+        </div>
+        <p class="main-para">
+          FIT SOLUTIONS is a design and development firm in Bahrain, with service
+          centers in India. Our team consists of passionate designers and developers
+          eager for new challenges.
+        </p>
+        <div class="main-button">
+          <a href="#" class="button">
+            <span class="button__spotlight"></span>
+            <span class="button__wrapper">
+              <span class="button__text">
+                View All Services <img src="assets/img/arrow-right.svg" alt="" class="button-arrow">
+              </span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Service List Section -->
+      <div class="col-lg-6">
+        <div class="service-box">
+          <div class="serv-box-left">
+            <div class="serv-img">
+              <img src="assets/img/service/serv-1.png" alt="">
+            </div>
+          </div>
+          <div class="serv-box-right">
+            <h4>Website Development</h4>
+            <div class="divider"></div>
+            <p>A website is often the first touch
+              point between you and potential
+              customers. We understand how
+              vital it is to your brand.</p>
+          </div>
+          <div class="serv-btn">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+        <div class="service-box">
+          <div class="serv-box-left">
+            <div class="serv-img">
+              <img src="assets/img/service/serv-2.png" alt="">
+            </div>
+          </div>
+          <div class="serv-box-right">
+            <h4>E-Commerce</h4>
+            <div class="divider"></div>
+            <p>eCommerce can assist businesses
+              of all sizes to achieve their goals. Our
+              team can provide eCommerce services
+              ranging from determining what your
+              company's goals are to making
+              evaluations and recommendations.</p>
+              <div class="serv-btn">
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+          </div>
+        </div>
+        <div class="service-box">
+          <div class="serv-box-left">
+            <div class="serv-img">
+              <img src="assets/img/service/serv-3.png" alt="">
+            </div>
+          </div>
+          <div class="serv-box-right">
+            <h4>Mobile Application</h4>
+            <div class="divider"></div>
+            <p>Businesses are now widely adopting
+              mobile applications to bring value to
+              their customers. This enhances the
+              efficiency of their operations, aiding
+              them to provide greater customer
+              satisfaction.</p>
+              <div class="serv-btn">
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- service -->
+
+  <!-- marquee -->
+  <div class="marquee-row">
+    <div class="marquee-block marquee">
+      <ul class="marquee-item-list">
+        <li>UI/UX DEsign <span><img src="assets/img/flat-fav.png" alt=""></span></li>
+        <li>Website Hosting <span><img src="assets/img/flat-fav.png" alt=""></span></li>
+        <li>odoo erp <span><img src="assets/img/flat-fav.png" alt=""></span></li>
+
+        <li>cyber security <span><img src="assets/img/flat-fav.png" alt=""></span></li>
+        <li>Branding and design <span><img src="assets/img/flat-fav.png" alt=""></span></li>
+        <li>Website Hosting <span><img src="assets/img/flat-fav.png" alt=""></span></li>
+
+        <li>BRANDING <span><img src="assets/img/flat-fav.png" alt=""></span></li>
+        <li>UI/UX DEsign <span><img src="assets/img/flat-fav.png" alt=""></span></li>
+        <li>Website Hosting <span><img src="assets/img/flat-fav.png" alt=""></span></li>
+      </ul>
+    </div>
+  </div>
+  <!-- marquee -->
+
+  <!-- services -->
+
+  <!-- tech -->
+  <section class="tech-main-section">
+    <div class="container">
+      <div class="section-title section-title-center">
+        <h4>Our Technologies</h4>
+        <h2 class="reveal-type" data-bg-color="#ffffff1c" data-fg-color="#fff">Incorporating advanced <br> technologies.
+        </h2>
+        <p class="main-para">We offer a wide range of IT services and solutions in Bahrain to help you thrive in the
+          digital era. Let's <br>
+          merge our advanced technology and top-notch services for an exceptional customer experience.</p>
+
+        <div class="main-button">
+          <a href="#" class="button">
+            <span class="button__spotlight"></span>
+            <span class="button__wrapper">
+              <span class="button__text">Explore more<img src="assets/img/arrow-right.svg" alt=""
+                  class="button-arrow"></span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="tech-main-box">
+        <div class="center-logo">
+          <img src="assets/img/tech/center-main.svg" alt="logo" />
+        </div>
+
+
+        <div class="icon-block lt-box-1">
+          <img src="assets/img/tech/1.png" />
+        </div>
+
+        <div class="icon-block lt-box-2">
+          <img src="assets/img/tech/2.png" />
+        </div>
+
+        <div class="icon-block lt-box-3">
+          <img src="assets/img/tech/3.png" />
+        </div>
+
+        <div class="icon-block lt-box-4">
+          <img src="assets/img/tech/4.png" />
+        </div>
+
+        <div class="icon-block lt-box-5">
+          <img src="assets/img/tech/5.png" />
+        </div>
+
+        <div class="icon-block lt-box-6">
+          <img src="assets/img/tech/6.png" />
+        </div>
+
+        <div class="icon-block lt-box-7">
+          <img src="assets/img/tech/7.png" />
+        </div>
+
+        <div class="icon-block lt-box-8">
+          <img src="assets/img/tech/8.png" />
+        </div>
+
+        <div class="icon-block lt-box-9">
+          <img src="assets/img/tech/9.png" />
+        </div>
+
+        <div class="icon-block lt-box-10">
+          <img src="assets/img/tech/10.png" />
+        </div>
+
+
+        <div class="icon-block lt-box-11">
+          <img src="assets/img/tech/11.png" />
+        </div>
+
+        <div class="icon-block lt-box-12">
+          <img src="assets/img/tech/12.png" />
+        </div>
+
+        <div class="icon-block lt-box-15">
+          <img src="assets/img/tech/13.png" />
+        </div>
+
+        <div class="icon-block lt-box-16">
+          <img src="assets/img/tech/14.png" />
+        </div>
+
+        <div class="icon-block lt-box-17">
+          <img src="assets/img/tech/15.png" />
+        </div>
+
+        <div class="icon-block lt-box-18">
+          <img src="assets/img/tech/16.png" />
+        </div>
+
+        <div class="icon-block lt-box-19">
+          <img src="assets/img/tech/17.png" />
+        </div>
+
+        <div class="icon-block lt-box-22">
+          <img src="assets/img/tech/18.png" />
+        </div>
+
+        <div class="icon-block lt-box-23">
+          <img src="assets/img/tech/19.png" />
+        </div>
+
+        <div class="icon-block lt-box-24">
+          <img src="assets/img/tech/20.png" />
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- tech -->
+
+  <!-- footer -->
+  <section class="footer">
+    <div class="container">
+      <hr class="footer-line">
+      <div class="row mt-md-5 mt-2 d-flex align-items-center">
+        <div class="col-lg-4">
+          <img src="assets/img/logo.png" alt="" class="logo-width">
+        </div>
+        <div class="col-lg-4">
+          <div class="footer-main-links">
+            <h6>Ready To order Your Project ?</h6>
+            <h5><a href="support@fridayinfotech.com">support@fridayinfotech.com</a></h5>
+          </div>
+        </div>
+        <div class="col-lg-4 d-flex justify-content-lg-end justify-content-start">
+          <div class="main-button">
+            <a href="#" class="button">
+              <span class="button__spotlight"></span>
+              <span class="button__wrapper">
+                <span class="button__text"> Explore More <img src="assets/img/arrow-right.svg" alt=""
+                    class="button-arrow"></span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-md-5 mt-2">
+        <div class="col-lg-4">
+          <p class="footer-para">
+            Cs simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+            dummy been the industry's standard dummy
+          </p>
+
+          <div class="footer-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+          </div>
+        </div>
+        <div class="col-lg-4 d-md-flex justify-content-lg-between">
+          <div class="footer-links pr-ct-5">
+            <h6>Quik Links</h6>
+            <ul>
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+              <li>
+                <a href="about.html">About us</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h6>Services</h6>
+            <ul>
+              <li>
+                <a href="service.html">Website Development</a>
+              </li>
+              <li>
+                <a href="service.html">Odoo ERP</a>
+              </li>
+              <li>
+                <a href="service.html">Mobile Application</a>
+              </li>
+              <li>
+                <a href="service.html">Digital Marketing</a>
+              </li>
+              <li>
+                <a href="service.html">Email Hosting</a>
+              </li>
+              <li>
+                <a href="service.html">Manage Engine</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <img src="assets/img/map.svg" alt="" class="footer-map">
+        </div>
+      </div>
+      <hr class="footer-line">
+      <div class="footer-divider">
+        <ul>
+          <li>© FIT SOLUTIONS 2025/ All rights reserved.</li>
+        </ul>
+        <ul class="footer-btm-links">
+          <li class="ft-divider"><a href="#">Privacy Policy</a></li>
+          <li class="ft-divider"><a href="#">Terms and Conditions</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- footer -->
+
+
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/script.js" defer></script>
+  <script src="assets/js/aos.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/owl.carousel.min.js"></script>
+  <script src="assets/js/font-awsome.js"></script>
+  <script src="assets/js/lenis.min.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/ScrollTrigger.min.js"></script>
+  <script src="assets/js/split-type.js"></script>
+  <script src="assets/js/lenis-script.js"></script>
+
+  
+
+  <script>
+  $(function () {
+    let count = -1; // start with -1
+    const initText = "Bahrain"; // set your initial text here
+    const wordsArray = ["Saudi Arabia", "Bahrain", "India"]; // change this text items to your own
+    const $word = $("#word");
+
+    // Set the initial text
+    $word.text(initText).css({
+      opacity: 1,
+      transition: "opacity 0.6s ease, transform 0.6s ease",
+    });
+
+    // Loop through words with smooth transition
+    setInterval(function () {
+      count++;
+      $word.css({ opacity: 0, transform: "translateY(-10px)" });
+
+      setTimeout(() => {
+        $word.text(wordsArray[count % wordsArray.length]);
+        $word.css({ opacity: 1, transform: "translateY(0)" });
+      }, 600); // Matches the transition duration
+    }, 4000); // Interval time between words
+  });
+  </script>
+
+</body>
+
+</html>
