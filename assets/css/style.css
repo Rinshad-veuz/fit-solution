@@ -3086,7 +3086,7 @@ input[type="number"] {
 
 /* <!-- ==================== End Responsive ==================== --> */
 
-.cursor {
+/* .cursor {
 	position: fixed;
 	width: 40px;
 	height: 40px;
@@ -3112,7 +3112,7 @@ input[type="number"] {
 	transition: 0.1s;
 	pointer-events: none;
 	z-index: 9999;
-}
+} */
 
 /* <!-- ==================== Portfolio ==================== --> */
 

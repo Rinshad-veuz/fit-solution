@@ -223,48 +223,7 @@ document.addEventListener('DOMContentLoaded', animateCounters);
 
 /* <!-- ==================== Menu ==================== --> */
 
-$(document).ready(function () {
-  const lenis = new Lenis({
-    smooth: true, // Enable smooth scrolling
-    duration: 1.2,
-  });
 
-  // Initialize Lenis
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-  requestAnimationFrame(raf);
-
-  $('.menu-toggle').on('click', function () {
-    $('.menu-toggle').toggleClass('active');
-
-    // Disable/Enable Lenis scrolling
-    if ($('.menu-toggle').hasClass('active')) {
-      lenis.stop(); // Stop Lenis scrolling
-      $('body').addClass('no-scroll'); // Additional safeguard
-    } else {
-      lenis.start(); // Restart Lenis scrolling
-      $('body').removeClass('no-scroll'); // Allow scrolling again
-    }
-  });
-  
-
-  
-// Lenis disabled
-const disableLenisSections = document.querySelectorAll('.no-lenis');
-
-disableLenisSections.forEach((section) => {
-  section.addEventListener('wheel', (e) => {
-    lenis.stop();
-    
-    section.scrollTop += e.deltaY;
-    
-    e.preventDefault();
-    
-    setTimeout(() => lenis.start(), 100);
-  }, { passive: false });
-});
 
 
 
@@ -348,7 +307,7 @@ disableLenisSections.forEach((section) => {
       headerOverlay.reversed(!headerOverlay.reversed());
     });
   }
-});
+
 
 $(document).ready(function () {
   $('.has-sub > a').click(function (e) {
