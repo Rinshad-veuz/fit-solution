@@ -47,25 +47,25 @@ gsap.from(".blog-tags a", {
 
 // slider js
 
-  // Initialize Lenis
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-  requestAnimationFrame(raf);
+  // // Initialize Lenis
+  // function raf(time) {
+  //   lenis.raf(time);
+  //   requestAnimationFrame(raf);
+  // }
+  // requestAnimationFrame(raf);
 
-  $('.menu-toggle').on('click', function () {
-    $('.menu-toggle').toggleClass('active');
+  // $('.menu-toggle').on('click', function () {
+  //   $('.menu-toggle').toggleClass('active');
 
-    // Disable/Enable Lenis scrolling
-    if ($('.menu-toggle').hasClass('active')) {
-      lenis.stop(); // Stop Lenis scrolling
-      $('body').addClass('no-scroll'); // Additional safeguard
-    } else {
-      lenis.start(); // Restart Lenis scrolling
-      $('body').removeClass('no-scroll'); // Allow scrolling again
-    }
-  });
+  //   // Disable/Enable Lenis scrolling
+  //   if ($('.menu-toggle').hasClass('active')) {
+  //     lenis.stop(); // Stop Lenis scrolling
+  //     $('body').addClass('no-scroll'); // Additional safeguard
+  //   } else {
+  //     lenis.start(); // Restart Lenis scrolling
+  //     $('body').removeClass('no-scroll'); // Allow scrolling again
+  //   }
+  // });
   
 
   
