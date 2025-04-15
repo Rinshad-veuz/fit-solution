@@ -108,20 +108,20 @@ gsap.from(".blog-tags a", {
 
 
 
-// Lenis disabled
-const disableLenisSections = document.querySelectorAll('.no-lenis');
+// // Lenis disabled
+// const disableLenisSections = document.querySelectorAll('.no-lenis');
 
-disableLenisSections.forEach((section) => {
-section.addEventListener('wheel', (e) => {
-  lenis.stop();
+// disableLenisSections.forEach((section) => {
+// section.addEventListener('wheel', (e) => {
+//   lenis.stop();
   
-  section.scrollTop += e.deltaY;
+//   section.scrollTop += e.deltaY;
   
-  e.preventDefault();
+//   e.preventDefault();
   
-  setTimeout(() => lenis.start(), 100);
-}, { passive: false });
-});
+//   setTimeout(() => lenis.start(), 100);
+// }, { passive: false });
+// });
 
 
 
