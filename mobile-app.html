@@ -1578,35 +1578,7 @@ section.addEventListener('wheel', (e) => {
   </script>
 
 
-  <script>
-    // const buttons = document.querySelectorAll('.button');
 
-    buttons.forEach(button => {
-      button.addEventListener('mousemove', function (evt) {
-        const movX = evt.clientX - this.getBoundingClientRect().x;
-        const movY = evt.clientY - this.getBoundingClientRect().y;
-
-        gsap.to(this.querySelector(".button__spotlight"), {
-          x: movX,
-          y: movY,
-          scale: 30,
-          duration: 0.3,
-        });
-      });
-
-      button.addEventListener('mouseleave', function (evt) {
-        const movX = evt.clientX - this.getBoundingClientRect().x;
-        const movY = evt.clientY - this.getBoundingClientRect().y;
-
-        gsap.to(this.querySelector(".button__spotlight"), {
-          x: movX,
-          y: movY,
-          scale: 0,
-          duration: 0.3,
-        });
-      });
-    });
-  </script>
 
 
   <script>
@@ -1616,115 +1588,16 @@ section.addEventListener('wheel', (e) => {
   </script>
 
 
-  <script>
-    // const navbar = document.getElementById('navbar');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    });
-  </script>
-
-
-  <script>
-    gsap.registerPlugin(ScrollTrigger)
-
-    // const splitTypes = document.querySelectorAll('.reveal-type')
-
-    splitTypes.forEach((char, i) => {
-
-      const bg = char.dataset.bgColor
-      const fg = char.dataset.fgColor
-
-      const text = new SplitType(char, {
-        types: 'chars'
-      })
-
-      gsap.fromTo(text.chars, {
-        color: bg,
-      }, {
-        color: fg,
-        duration: 0.3,
-        stagger: 0.02,
-        scrollTrigger: {
-          trigger: char,
-          start: 'top 90%',
-          end: 'bottom 40%',
-          scrub: true,
-          markers: false,
-          toggleActions: 'play play reverse reverse'
-        }
-      })
-    })
 
 
 
-    requestAnimationFrame(raf)
-  </script>
 
-  <script>
-    // const lenis = new Lenis();
 
-    // let isScrolling = false;
-    // const scrollDelay = 100;
 
-    lenis.on('scroll', (e) => {
-      if (!isScrolling) {
-        isScrolling = true;
 
-        console.log(`Scroll event:`, e);
 
-        setTimeout(() => {
-          isScrolling = false;
-        }, scrollDelay);
-      }
-    });
 
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  </script>
-
-  <script>
-    gsap.registerPlugin(ScrollTrigger);
-
-    function animateCounters() {
-      const counters = document.querySelectorAll('.counter');
-
-      counters.forEach(counter => {
-        const targetValue = +counter.getAttribute('data-target');
-
-        // Reset counter value
-        counter.innerText = '0';
-
-        // Animate the counter value
-        gsap.to(counter, {
-          innerText: targetValue, // Animates the `innerText` property
-          duration: 2, // Animation duration
-          ease: "power1.out", // Smooth easing
-          snap: {
-            innerText: 1
-          }, // Snap to whole numbers
-          scrollTrigger: {
-            trigger: counter, // Trigger on the counter
-            start: "top 90%", // Start when 90% of the counter is in the viewport
-            toggleActions: "play reset play reset" // Refresh animation on re-entry
-          }
-        });
-      });
-    }
-
-    // Initialize the animation
-    document.addEventListener('DOMContentLoaded', animateCounters);
-  </script>
-
-  <script>
+  <!-- <script>
     $(document).ready(function () {
       const lenis = new Lenis({
         smooth: true, // Enable smooth scrolling
@@ -1842,7 +1715,7 @@ section.addEventListener('wheel', (e) => {
     $(document).ready(function () {
       $('.nsd-menu-overlay').addClass('active');
     });
-  </script>
+  </script> -->
 
   <script>
     $(function () {
