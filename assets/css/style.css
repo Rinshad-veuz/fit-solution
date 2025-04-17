@@ -42,7 +42,7 @@ img {
 /* Scrollbar */
 
 ::-webkit-scrollbar {
-	width: 12px;
+	width: 5px;
 	/* Width of the scrollbar */
 }
 
