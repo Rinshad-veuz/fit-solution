@@ -71,7 +71,7 @@
               <li class="fullscreen-single__item "><a href="index.html" class="__active">Home</a></li>
               <li class="fullscreen-single__item"><a href="about.html">About us</a></li>
               <li class="fullscreen-single__item has-sub menu-item-has-children">
-                <a href="javascript:void(0)">
+                <a href="services.html">
                   <span>Services</span> <span class="menu-arrow"><i class="fa-solid fa-chevron-down"></i></span>
                 </a>
                 <ul class="sub-menu p-0">
@@ -182,6 +182,20 @@
                               <a href="indutrial-training.html">
                                 <span>Industrial Training</span>
                               </a>
+                            </li>
+                            <li style="position: static !important; margin-top: 10px; " class="sub-menu__inner">
+                              
+                              <div class="main-button">
+                                <div class="main-button">
+                                  <a href="services.html" class="button">
+                                    <span class="button__spotlight"></span>
+                                    <span class="button__wrapper">
+                                      <span class="button__text" style="letter-spacing: 0px !important;">All Services <img src="assets/img/arrow-right.svg" alt=""
+                                          class="button-arrow"></span>
+                                    </span>
+                                  </a>
+                                </div>
+                              </div>
                             </li>
                           </ul>
                         </div>
@@ -348,6 +362,21 @@
                                 <span> Manufacturing ERP</span>
                               </a>
                             </li>
+                            <li style="position: static !important; margin-top: 10px; " class="sub-menu__inner">
+                              
+                              <div class="main-button">
+                                <div class="main-button">
+                                  <a href="products.html" class="button">
+                                    <span class="button__spotlight"></span>
+                                    <span class="button__wrapper">
+                                      <span class="button__text" style="letter-spacing: 0px !important;">All Products <img src="assets/img/arrow-right.svg" alt=""
+                                          class="button-arrow"></span>
+                                    </span>
+                                  </a>
+                                </div>
+                              </div>
+                            </li>
+                           
                           </ul>
                         </div>
                       </div>
@@ -357,6 +386,7 @@
                   </li>
                 </ul>
               </li>
+              <li class="fullscreen-single__item"><a href="blog.html">Blogs</a></li>
               <li class="fullscreen-single__item"><a href="contact.html">Contacts</a></li>
             </ul>
             <div class="sm-show-btn">
@@ -521,7 +551,11 @@
 
     <div class="banner-abstract">
       <img src="assets/img/home-ab.png" alt="" class="banner-glass-ab">
+     
     </div>
+    
+
+   
 
   </div>
   <!-- banner end -->
@@ -1113,7 +1147,23 @@
   <script src="assets/js/split-type.js"></script>
   <!-- <script src="assets/js/lenis-script.js"></script> -->
 
+<script>
+    // Lenis disabled
+    const disableLenisSections = document.querySelectorAll('.no-lenis');
 
+disableLenisSections.forEach((section) => {
+section.addEventListener('wheel', (e) => {
+  lenis.stop();
+  
+  section.scrollTop += e.deltaY;
+  
+  e.preventDefault();
+  
+  setTimeout(() => lenis.start(), 100);
+}, { passive: false });
+});
+
+</script>
 
   <script>
     $(function () {
