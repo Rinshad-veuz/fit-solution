@@ -492,466 +492,162 @@
 <script src="assets/js/split-type.js"></script>
 <script src="assets/js/lenis-script.js"></script>
 
-  <script>
-    let cursor = document.querySelector(".cursor");
-let cursor2 = document.querySelector(".cursor2");
-let cursorScale = document.querySelectorAll(".cursor-scale");
-let mouseX = 0;
-let mouseY = 0;
-
-gsap.to({}, 0.016, {
-  repeat: -1,
-  onRepeat: function () {
-    gsap.set(cursor, {
-      css: {
-        left: mouseX,
-        top: mouseY
-      }
-    });
-    gsap.set(cursor2, {
-      css: {
-        left: mouseX,
-        top: mouseY
-      }
-    });
-  }
-});
-
-window.addEventListener("mousemove", (e) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-});
-
-</script>
-
-<script>
-  const buttons = document.querySelectorAll('.button');
-
-buttons.forEach(button => {
-  button.addEventListener('mousemove', function(evt) {
-    const movX = evt.clientX - this.getBoundingClientRect().x;
-    const movY = evt.clientY - this.getBoundingClientRect().y;
-
-    gsap.to(this.querySelector(".button__spotlight"), {
-      x: movX,
-      y: movY,
-      scale: 30,
-      duration: 0.3,
-    });
-  });
-
-  button.addEventListener('mouseleave', function(evt) {
-    const movX = evt.clientX - this.getBoundingClientRect().x;
-    const movY = evt.clientY - this.getBoundingClientRect().y;
-
-    gsap.to(this.querySelector(".button__spotlight"), {
-      x: movX,
-      y: movY,
-      scale: 0,
-      duration: 0.3,
-    });
-  });
-});
-</script>
-
-
-  <script>
-        $(document).ready(function () {
-      // Initialize OwlCarousel
-      $('.owl-carousel').owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: false,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        responsive: {
-          0: {
-            items: 1 // 1 item for small screens (e.g., phones)
-          },
-          600: {
-            items: 2 // 2 items for medium screens (e.g., tablets)
-          },
-          1000: {
-            items: 3 // 4 items for larger screens (e.g., desktops)
-          },
-          1200: {
-            items: 4 // 4 items for larger screens (e.g., desktops)
-          }
-        }
-      });
-
-      gsap.registerPlugin(ScrollTrigger);
-
-      gsap.utils.toArray(".item").forEach((box, index) => {
-        gsap.fromTo(box, {
-          x: 100,
-          opacity: 0
-        }, {
-          x: 0,
-          opacity: 1,
-          duration: 1,
-          delay: index * 0.1,
-          scrollTrigger: {
-            trigger: box,
-            start: "top 90%",
-            end: "bottom 10%",
-            scrub: true
-          }
-        });
-      });
-    });
-  </script>
-
-  <script>
-          const navbar = document.getElementById('navbar');
-
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-          navbar.classList.add('scrolled');
-        } else {
-          navbar.classList.remove('scrolled');
-        }
-      });
-  </script>
-
-
-  <script>
-    const races = document.querySelector(".races");
-    const words = document.querySelectorAll(".races h2");
-
-    // Break each word into individual letters
-    words.forEach(word => {
-      const letters = word.textContent.split("").map(letter => `<span>${letter}</span>`).join("");
-      word.innerHTML = letters;
-    });
-
-    const letters = gsap.utils.toArray(".races span");
-
-    // Wave animation for letters
-    gsap.set(letters, {
-      y: 100,
-      opacity: 0
-    });
-
-    gsap.to(letters, {
-      scrollTrigger: {
-        trigger: ".racesWrapper",
-        start: "top 20%",
-        end: "bottom 80%",
-        scrub: 1,
-      },
-      y: 0,
-      opacity: 1,
-      stagger: {
-        each: 0.05, // Stagger delay for each letter
-        ease: "power2.out",
-        from: "start", // Letters animate from the start
-      },
-    });
-
-    // Horizontal scroll for the entire text block
-    const tween = gsap.to(races, {
-      x: () => -(races.scrollWidth - window.innerWidth),
-      duration: 3,
-      ease: "none",
-    });
-
-    ScrollTrigger.create({
-      trigger: ".racesWrapper",
-      start: "top 20%",
-      end: () => `+=${races.scrollWidth - window.innerWidth}`,
-      pin: true,
-      animation: tween,
-      scrub: 1,
-      invalidateOnRefresh: true,
-    });
-  </script>
-
-
-  <script>
-    AOS.init({
-      disable: 'mobile'
-    });
-  </script>
-
-
-
-  <script>
-    gsap.registerPlugin(ScrollTrigger)
-
-    const splitTypes = document.querySelectorAll('.reveal-type')
-
-    splitTypes.forEach((char, i) => {
-
-      const bg = char.dataset.bgColor
-      const fg = char.dataset.fgColor
-
-      const text = new SplitType(char, {
-        types: 'chars'
-      })
-
-      gsap.fromTo(text.chars, {
-        color: bg,
-      }, {
-        color: fg,
-        duration: 0.3,
-        stagger: 0.02,
-        scrollTrigger: {
-          trigger: char,
-          start: 'top 90%',
-          end: 'bottom 40%',
-          scrub: true,
-          markers: false,
-          toggleActions: 'play play reverse reverse'
-        }
-      })
-    })
-
-
-
-    requestAnimationFrame(raf)
-  </script>
-
-  <script>
-    // Smooth Scrolling
-    const lenis = new Lenis();
-
-    let isScrolling = false;
-    const scrollDelay = 100; // Delay in milliseconds
-
-    lenis.on('scroll', (e) => {
-      if (!isScrolling) {
-        isScrolling = true;
-
-        console.log(`Scroll event:`, e);
-
-        setTimeout(() => {
-          isScrolling = false;
-        }, scrollDelay);
-      }
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  </script>
-
-
-  <script>
-    $(document).ready(function () {
-      const lenis = new Lenis({
-        smooth: false, // Enable smooth scrolling
-      });
-
-      // Initialize Lenis
-      function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      }
-      requestAnimationFrame(raf);
-
-      $('.menu-toggle').on('click', function () {
-        $('.menu-toggle').toggleClass('active');
-
-        // Disable/Enable Lenis scrolling
-        if ($('.menu-toggle').hasClass('active')) {
-          lenis.stop(); // Disable Lenis scrolling
-          $('body').css('overflow', 'hidden'); // Additional safeguard
-        } else {
-          lenis.start(); // Enable Lenis scrolling
-          $('body').css('overflow', 'auto'); // Restore scrolling
-        }
-      });
-
-      var headerOverlay = new TimelineMax({
-        paused: true
-      });
-
-      if ($(".nsd-menu-overlay")[0]) {
-        headerOne();
-      }
-
-      linkSubmenu();
-
-      function linkSubmenu() {
-        var menuItemWithChild = $(".nsd-menu-fullscren .has-sub > a");
-
-        menuItemWithChild.on('click', function (e) {
-          e.preventDefault(); // Prevent default link behavior
-
-          var thisItem = $(this),
-            thisItemParent = thisItem.parent(),
-            submenu = thisItemParent.find('> ul.sub-menu'),
-            thisItemParentSiblings = thisItemParent.siblings('.has-sub');
-
-          // Check if the current menu item is already open
-          if (submenu.is(':visible')) {
-            submenu.slideUp(); // Hide submenu
-            thisItemParent.removeClass('open_sub'); // Remove active class
-          } else {
-            thisItemParent.addClass('open_sub'); // Add active class to the clicked item
-            submenu.slideDown(); // Show submenu
-
-            // Close all sibling submenus
-            thisItemParentSiblings.removeClass('open_sub').find('> ul.sub-menu').slideUp();
-          }
-
-          return false; // Prevent default behavior
-        });
-      }
-
-      function headerOne() {
-        gsap.set(".nsd-menu-overlay", {
-          yPercent: -100
-        });
-        gsap.set(".nsd-menu-overlay__content_part__left", {
-          yPercent: 100
-        });
-        gsap.set(".nsd-menu-overlay__content_part__left ul .fullscreen-single__item", {
-          rotate: 0,
-          y: 250,
-          skewY: 0
-        });
-        gsap.set(".nsd-menu-overlay__content_part__left ul .fullscreen-single__item1", {
-          rotate: 0,
-          y: 250,
-          skewY: 0
-        });
-
-        headerOverlay
-          .to(".nsd-menu-overlay", 1, {
-            yPercent: 0
-          })
-          .to(".nsd-menu-overlay__content_part__left", 1, {
-            yPercent: 0
-          }, "-=1")
-          .to(".nsd-menu-overlay__content_part__left ul .fullscreen-single__item", {
-            opacity: 1,
-            rotate: 0,
-            y: 0,
-            skewY: 0,
-            stagger: 0.2
-          }, "-=0.5")
-          .to(".nsd-menu-overlay__content_part__right", 0.5, {
-            y: 0,
-            opacity: 1
-          }, "-=0.5");
-
-        headerOverlay.reverse();
-
-        $(document).on("click", ".menu-toggle", function () {
-          headerOverlay.reversed(!headerOverlay.reversed());
-        });
-      }
-    });
-  </script>
-
-  <script>
-    $(function () {
-      const svg = document.getElementById("svg");
-      const tl = gsap.timeline();
-      const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
-      const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
-
-      tl.to(".loader-wrap-heading .load-text, .loader-wrap-heading .cont, .loader-image", {
-        delay: 1.5,
-        y: -100,
-        opacity: 0,
-      });
-      tl.to(svg, {
-        duration: 0.5,
-        attr: {
-          d: curve
-        },
-        ease: "power2.easeIn",
-      }).to(svg, {
-        duration: 0.5,
-        attr: {
-          d: flat
-        },
-        ease: "power2.easeOut",
-      });
-      tl.to(".loader-wrap", {
-        y: -1500,
-      });
-      tl.to(".loader-wrap", {
-        zIndex: -1,
-        display: "none",
-      });
-    });
-  </script>
-
-  <script>
-    $(document).ready(function () {
-      $('.has-sub > a').click(function (e) {
-        e.preventDefault();
-        var submenu = $(this).siblings('.sub-menu');
-        submenu.toggleClass('active'); // Toggle the 'active' class for showing or hiding
-      });
-    });
-    $(document).ready(function () {
-      $('.nsd-menu-overlay').addClass('active'); // This will show the menu with a fade-in effect
-    });
-  </script>
-
-  <script>
-    if ($('.reveal').length) {
-      gsap.registerPlugin(ScrollTrigger);
-      let revealContainers = document.querySelectorAll(".reveal");
-      revealContainers.forEach((container) => {
-        let image = container.querySelector("img");
-        let tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: container,
-            toggleActions: "play none none none"
-          }
-        });
-        tl.set(container, {
-          autoAlpha: 1
-        });
-        tl.from(container, 1, {
-          xPercent: -100,
-          ease: Power2.out
-        });
-        tl.from(image, 1, {
-          xPercent: 100,
-          scale: 1,
-          delay: -1,
-          ease: Power2.out
-        });
-      });
-    }
-  </script>
-
-
-  <!-- marquee -->
-  <script>
-    $(document).ready(function () {
-      const $marqueeBlock = $(".marquee-block");
-      const $marqueeList = $(".marquee-item-list");
-
-      // Clone marquee content once for seamless scrolling
-      $marqueeList.clone().appendTo($marqueeBlock);
-
-      // Trigger animation
-      const animateMarquee = () => {
-        const scrollWidth = $marqueeBlock[0].scrollWidth / 2; // Width of one cycle
-        const animationDuration = 10; // Adjust duration for speed (seconds)
-
-        $marqueeBlock.css({
-          animation: `marquee ${animationDuration}s linear infinite`,
-        });
-      };
-
-      animateMarquee();
-    });
-  </script>
-  <!-- marquee -->
-
-
+<section class="footer">
+  <div class="container">
+    <hr class="footer-line">
+
+    <div class="cta-wrapper" data-aos="fade-up" data-aos-duration="1500">
+      <h2>
+        Ready To order Your Project ?
+        </h2>
+<div class="bg"><svg width="320" height="135" viewBox="0 0 320 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M5.48873 267.853C9.84073 271.725 7.23273 269.613 154.945 319.181C158.227 320.274 161.775 320.274 165.057 319.181C304.001 271.997 308.545 273.165 314.529 267.853C316.39 266.113 317.866 264.004 318.865 261.661C319.584 259.857 319.969 257.938 320.001 255.997V63.9968C319.969 62.0555 319.584 60.1362 318.865 58.3328C317.866 55.9893 316.39 53.8803 314.529 52.1408C308.721 46.9888 305.457 48.3008 165.057 0.812773C161.775 -0.280364 158.227 -0.280364 154.945 0.812773C110.401 15.7408 12.5607 47.9968 8.67273 49.9968C7.51955 50.573 6.44427 51.2934 5.47273 52.1408C3.61112 53.883 2.1295 55.9911 1.12073 58.3328C0.407022 60.1372 0.0275118 62.0565 0.000732422 63.9968V255.997C0.0326085 257.938 0.41755 259.857 1.13673 261.661C2.14183 264.004 3.62395 266.113 5.48873 267.853ZM288.001 233.789L229.057 214.157C225.025 212.816 220.627 213.131 216.828 215.034C213.029 216.936 210.142 220.269 208.801 224.301C207.46 228.332 207.775 232.731 209.678 236.53C211.58 240.328 214.913 243.216 218.945 244.557L253.409 255.997L176.001 281.789V123.533L288.001 86.2048V233.789ZM160.001 32.8608L253.409 63.9968L160.001 95.1328L66.5927 63.9968L160.001 32.8608ZM32.0007 86.2048L144.001 123.533V281.789L66.5927 255.997L101.057 244.509C105.088 243.168 108.422 240.28 110.324 236.482C112.226 232.683 112.542 228.284 111.201 224.253C109.86 220.221 106.972 216.888 103.174 214.986C99.3749 213.083 94.976 212.768 90.9447 214.109L32.0007 233.789V86.2048Z" fill="currentColor"></path>
+</svg></div>
+
+        <div class="main-button">
+          <a href="enquiry.html" class="button">
+            <span class="button__spotlight"></span>
+            <span class="button__wrapper">
+              <span class="button__text"> Request a Quote <img src="assets/img/arrow-right.svg" alt=""
+                  class="button-arrow"></span>
+            </span>
+          </a>
+        </div>
+    </div>
+    <div class="row mt-md-5 mt-2 d-flex align-items-center">
+      <div class="col-lg-4">
+        <img src="assets/img/logo.png" alt="" class="logo-width">
+      </div>
+      <div class="col-lg-4">
+        <div class="footer-main-links">
+          <h6>Ready To order Your Project ?</h6>
+          <h5><a href="support@fridayinfotech.com">support@fridayinfotech.com</a></h5>
+        </div>
+      </div>
+      <div class="col-lg-4 d-flex justify-content-lg-end justify-content-start">
+        <div class="main-button">
+          <a href="#" class="button">
+            <span class="button__spotlight"></span>
+            <span class="button__wrapper">
+              <span class="button__text"> Explore More <img src="assets/img/arrow-right.svg" alt=""
+                  class="button-arrow"></span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-md-5 mt-2">
+      <div class="col-lg-4 col-md-12">
+        <p class="footer-para">
+          Fit Solutions is a software development company, renowned for delivering innovative and customized
+          technology solutions.
+        </p>
+
+        <div class="footer-icons">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12 d-md-flex justify-content-lg-between">
+        <div class="footer-list ">
+          <div class="footer-links ">
+            <h6>Quik Links</h6>
+            <ul>
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+              <li>
+                <a href="about.html">About us</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h6>Services</h6>
+            <ul>
+              <li>
+                <a href="service.html">Website Development</a>
+              </li>
+              <li>
+                <a href="service.html">Odoo ERP</a>
+              </li>
+              <li>
+                <a href="service.html">Mobile Application</a>
+              </li>
+              <li>
+                <a href="service.html">Digital Marketing</a>
+              </li>
+              <li>
+                <a href="service.html">Email Hosting</a>
+              </li>
+              <li>
+                <a href="service.html">Manage Engine</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h6>Services</h6>
+            <ul>
+              <li>
+                <a href="service.html">Website Development</a>
+              </li>
+              <li>
+                <a href="service.html">Odoo ERP</a>
+              </li>
+              <li>
+                <a href="service.html">Mobile Application</a>
+              </li>
+              <li>
+                <a href="service.html">Digital Marketing</a>
+              </li>
+              <li>
+                <a href="service.html">Email Hosting</a>
+              </li>
+              <li>
+                <a href="service.html">Manage Engine</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <img src="assets/img/map.svg" alt="" class="footer-map">
+      </div>
+    </div>
+    <hr class="footer-line">
+    <div class="footer-divider">
+      <ul>
+        <li>© FIT SOLUTIONS 2025/ All rights reserved.</li>
+      </ul>
+      <ul class="footer-btm-links">
+        <li class="ft-divider"><a href="#">Privacy Policy</a></li>
+        <li class="ft-divider"><a href="#">Terms and Conditions</a></li>
+        <li><a href="#">Sitemap</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- footer -->
+
+<script src="assets/js/animation.js"></script>
+<script src="assets/js/script.js" defer></script>
+<script src="assets/js/aos.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/font-awsome.js"></script>
+<script src="assets/js/lenis.min.js"></script>
+<script src="assets/js/gsap.min.js"></script>
+<script src="assets/js/ScrollTrigger.min.js"></script>
+<script src="assets/js/split-type.js"></script>
+<script src="assets/js/lenis-script.js"></script>
 </body>
 
 </html>
