@@ -2507,7 +2507,7 @@ input[type="number"] {
 	}
 
 	.section-title h2 {
-		font-size: 24px;
+		font-size: 38px;
 	}
 }
 
@@ -2702,7 +2702,7 @@ input[type="number"] {
 	}
 
 	.section-title h2 {
-		/* font-size: 30px; */
+		font-size: 30px;
 	}
 
 	.serv-img {
@@ -4373,6 +4373,12 @@ overflow: visible;
 	  .product-img-custom img {
 		height: 300px;
 	  }
+	  .tow-phase h4 {
+		font-size: 26px;
+	  }
+	  .tow-phase {
+		padding:30px;
+	  }
 }
 
 @media screen and (max-width:768px) {
@@ -4466,6 +4472,26 @@ overflow: visible;
 			border-bottom:
 		dashed 1px #75613c;
 		}
+		#main {
+			overflow: visible !important;
+			height: auto !important;
+		}
+		.panel {
+			opacity: 1 !important;
+			transform: scale(1) !important;
+			position: relative !important;
+		}	
+		.panel:not(:first-child) {
+	  visibility: visible;
+	  margin-top: 40px;
+	}
+	.tow-phase h4 {
+		font-size: 22px;
+		margin-bottom: 10px;
+	  }
+	  .product-img {
+		height: 200px;
+	  }
 }
 
 @media screen and (max-width:600px) {
@@ -4634,3 +4660,8 @@ overflow: visible;
 		height: 200px;
 	  }
 }
+
+
+
+
+

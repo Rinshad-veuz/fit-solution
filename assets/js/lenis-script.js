@@ -126,35 +126,47 @@
     
     
 
-        gsap.registerPlugin(ScrollTrigger)
-    
-        const splitTypes = document.querySelectorAll('.reveal-type')
-    
-        splitTypes.forEach((char, i) => {
-    
-          const bg = char.dataset.bgColor
-          const fg = char.dataset.fgColor
-    
-          const text = new SplitType(char, {
-            types: 'chars'
-          })
-    
-          gsap.fromTo(text.chars, {
-            color: bg,
-          }, {
-            color: fg,
-            duration: 0.3,
-            stagger: 0.02,
-            scrollTrigger: {
-              trigger: char,
-              start: 'top 90%',
-              end: 'bottom 40%',
-              scrub: true,
-              markers: false,
-              toggleActions: 'play play reverse reverse'
-            }
-          })
-        })
+       /* <!-- ==================== Reveal type ==================== --> */
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+const splitTypes = document.querySelectorAll('.reveal-type');
+
+splitTypes.forEach((char, i) => {
+    const bg = char.dataset.bgColor;
+    const fg = char.dataset.fgColor;
+
+    // Split into words first to prevent breakage
+    const text = new SplitType(char, {
+        types: 'words, chars' // First split into words, then into characters
+    });
+
+    // Ensure words stay together by using `white-space: nowrap`
+    gsap.set(text.words, {
+        display: 'inline-block',
+        whiteSpace: 'nowrap'
+    });
+
+    gsap.fromTo(text.chars, {
+        color: bg,
+    }, {
+        color: fg,
+        duration: 0.3,
+        stagger: 0.02,
+        scrollTrigger: {
+            trigger: char,
+            start: 'top 90%',
+            end: 'bottom 40%',
+            scrub: true,
+            markers: false,
+            toggleActions: 'play play reverse reverse'
+        }
+    });
+});
+
+/* <!-- ==================== Reveal type ==================== --> */
     
     
     
@@ -529,6 +541,84 @@
               animateMarquee();
           });
 
+
+
+
+          console.clear();
+          gsap.registerPlugin(ScrollTrigger);
+      
+          // Initialize variables
+          const panels = gsap.utils.toArray(".panel");
+          let scrollTriggers = [];
+          let pinScrollTrigger;
+      
+          function setupAnimations() {
+              // Clear existing triggers
+              scrollTriggers.forEach(st => st.kill());
+              if (pinScrollTrigger) pinScrollTrigger.kill();
+      
+              // Mobile behavior (≤768px)
+              if (window.innerWidth <= 768) {
+                  // Reset all panels to visible
+                  gsap.set(panels, {
+                      scale: 1,
+                      autoAlpha: 1,
+                      clearProps: "all"
+                  });
+                  
+                  // Reset container styles
+                  document.querySelector("#main").style.overflow = "visible";
+                  document.querySelector("body").style.overflow = "auto";
+              } 
+              // Desktop behavior (>768px)
+              else {
+                  // Set initial states
+                  gsap.set(panels, { scale: 1, autoAlpha: 1 });
+                  gsap.set(panels.slice(1), { scale: 0.8, autoAlpha: 0 });
+      
+                  // Create panel animations
+                  panels.forEach((panel, i) => {
+                      if (panels[i + 1]) {
+                          const st = ScrollTrigger.create({
+                              trigger: "#main",
+                              start: "top+=" + 100 * (i + 1) + "%" + " top",
+                              end: "top+=" + 100 * (i + 1) + "%" + " top",
+                              id: i,
+                              onEnter: () => {
+                                  gsap.timeline()
+                                      .to(panel, { scale: 0.8, autoAlpha: 0 })
+                                      .to(panels[i + 1], { scale: 1, autoAlpha: 1 }, "<");
+                              },
+                              onEnterBack: () => {
+                                  gsap.timeline()
+                                      .to(panel, { scale: 1, autoAlpha: 1 })
+                                      .to(panels[i + 1], { scale: 0.8, autoAlpha: 0 }, "<");
+                              }
+                          });
+                          scrollTriggers.push(st);
+                      }
+                  });
+      
+                  // Create pinning effect
+                  pinScrollTrigger = ScrollTrigger.create({
+                      trigger: "#main",
+                      pin: true,
+                      end: "+=" + panels.length * 100 + "%"
+                  });
+              }
+          }
+      
+          // Initial setup
+          setupAnimations();
+      
+          // Handle resize with debounce
+          let resizeTimeout;
+          window.addEventListener('resize', function() {
+              clearTimeout(resizeTimeout);
+              resizeTimeout = setTimeout(() => {
+                  setupAnimations();
+              }, 100);
+          });
 
   
   
