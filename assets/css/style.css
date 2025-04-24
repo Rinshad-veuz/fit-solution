@@ -853,6 +853,7 @@ img {
 .section-title {
 	margin-bottom: 15px;
 }
+
 .section-title h4 {
 	font-size: 16px;
 	text-transform: uppercase;
@@ -1454,7 +1455,7 @@ img {
 }
 
 .footer-main-links h5 a {
-	color: var(--white-color) !important;
+	color: #0f2923 !important;
 }
 
 .footer-main-links h6 {
@@ -3843,10 +3844,11 @@ input[type="number"] {
 	transition: .3s;
 	height: 100px !important;
 	margin: 10px !important;
+	border-radius: 5px;
 }
 
 .odoo-module1 .item:hover {
-	background: var(--primary-color);
+	/* background: var(--primary-color); */
 	border-color: var(--primary-color);
 }
 
@@ -3863,10 +3865,11 @@ input[type="number"] {
 	transition: .3s;
 	height: 100px !important;
 	margin: 10px !important;
+	border-radius: 5px;
 }
 
 .odoo-module2 .item:hover {
-	background: var(--primary-color);
+	/* background: var(--primary-color); */
 	border-color: var(--primary-color);
 }
 
@@ -4157,13 +4160,14 @@ align-items: center;
 	margin-bottom: 40px;
 	padding-top: 40px;
 }
+
 .product-list-container::after {
 	position: absolute;
 	content: "";
 	border-top: dashed 1px #75613c;
 	left: 25px;
 	top: 0;
-	width:97%;
+	width: 97%;
 }
 
 /* .product-list-container .service-card{
@@ -4197,15 +4201,19 @@ align-items: center;
 	margin-top: 25px;
 }
 
+.service-faq .accordion {
+	width: 90%;
+	margin: 0 auto;
+}
 
-.service-faq .accordion-item{
+.service-faq .accordion-item {
 	border:
-	1px solid rgba(255, 255, 255, 0.15);
-	  border-radius:
-	12px;
-	  backdrop-filter: blur(150px);
-	  background:
-	rgba(197, 197, 197, 0.05);
+		1px solid rgba(255, 255, 255, 0.15);
+	border-radius:
+		12px;
+	backdrop-filter: blur(150px);
+	background:
+		rgba(197, 197, 197, 0.05);
 	padding: 20px;
 	margin-bottom: 5px;
 }
@@ -4219,56 +4227,104 @@ align-items: center;
 	box-shadow: none !important;
 	padding: 0 !important;
 	background-color: transparent !important;
-  }
-  .service-faq .accordion-button::after {
+}
+
+.service-faq .accordion-button::after {
 	background-image: url(../img/arrow-faq.png);
 	width: 16px !important;
 	background-size: contain;
 	margin-top: 10px;
 }
-  .service-faq .main-para{
-font-size: 16px;
+
+.service-faq .main-para {
+	font-size: 16px;
 	margin: 0;
 	margin-top: 10px;
 }
-.accordion-body{
-	padding:1px 0 !important;
-	}
 
-	.help-desk-row .main-para {
-		
-			font-size: 16px;
-			color: var(--para-color);
-			font-weight: 300;
-		 
-	}
+.accordion-body {
+	padding: 1px 0 !important;
+}
 
-	.service-faq .accordion-body ul {
-		padding: 0;
-		list-style-type: none;
-		margin: 0;
-		margin-top: 10px;
-	}
-	
-	.service-faq .accordion-body ul li {
-		position: relative;
-		padding-left: 20px;
-		color: var(--para-color);
-		font-size: 14px;
-		margin-bottom: 5px;
-		font-weight: 300;
-	}
-	
-	.service-faq .accordion-body ul li::before {
-		content: "↳";
-		position: absolute;
-		color: #fbad1cab;
-		left: 0;
-		top: 0;
-		font-size: 18px;
-		transition: 0.3s;
-	}
+.help-desk-row .main-para {
 
+	font-size: 16px;
+	color: var(--para-color);
+	font-weight: 300;
+
+}
+
+.service-faq .accordion-body ul {
+	padding: 0;
+	list-style-type: none;
+	margin: 0;
+	margin-top: 10px;
+}
+
+.service-faq .accordion-body ul li {
+	position: relative;
+	padding-left: 20px;
+	color: var(--para-color);
+	font-size: 14px;
+	margin-bottom: 5px;
+	font-weight: 300;
+}
+
+.service-faq .accordion-body ul li::before {
+	content: "↳";
+	position: absolute;
+	color: #fbad1cab;
+	left: 0;
+	top: 0;
+	font-size: 18px;
+	transition: 0.3s;
+}
+
+.client-container .bs-slider .item {
+	padding: 20px 15px;
+	margin: 0px;
+	border-radius: 0;
+}
+.client-container .bs-slider .item:hover {
+	border-color: #fbad1c8c;
+}
+
+.client-container .bs-slider .item img {
+	height: 60px;
+	object-fit: contain;
+}
+.client-container .owl-carousel,
+.client-container .owl-stage,
+.client-container .owl-stage-outer,
+.client-container .owl-item {
+	display: block !important;
+}
+.client-title{
+	text-align: center;
+	color: #FBAD1C;
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: 400;
+	margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+.left-cont{
+	position: -webkit-sticky;
+    position: sticky;
+    top: 100px;
+    align-self: flex-start;
+    z-index: 1;
+}
+.right-cont{
+	max-height: 1500px;
+	overflow: hidden;
+}
 
 @media screen and (max-width:1400px) {
 	.nsd-menu-overlay {
@@ -4405,9 +4461,10 @@ font-size: 16px;
 	.service-card .service-card-cont h5 {
 		font-size: 24px;
 	}
+
 	.product-img-custom img {
 		height: 300px;
-	  }
+	}
 }
 
 @media screen and (max-width:1100px) {
@@ -4498,12 +4555,18 @@ font-size: 16px;
 	.tow-phase-div img {
 		border-radius: 0;
 	}
+
 	.service-faq .accordion-button {
 		font-size: 18px;
-	  }
-	  .product-list-container .service-card .service-card-cont p {
+	}
+
+	.product-list-container .service-card .service-card-cont p {
 		margin-top: 10px;
-	  }
+	}
+
+	.service-faq .accordion {
+		width: 100%;
+	}
 }
 
 @media screen and (max-width:768px) {
@@ -4628,19 +4691,24 @@ font-size: 16px;
 		border-radius:
 			50px;
 	}
+
 	.service-faq .accordion-button::after {
 		width: 12px !important;
-	  }
-	  .product-list-container {
+	}
+
+	.product-list-container {
 		margin-bottom: 0;
-	  }
-	  .product-list-container::after {
+	}
+
+	.product-list-container::after {
 		width: 85%;
-	  }
-	  .cta-wrapper {
-		gap:10px;
-	  }
-	  .footer-main-links h5 {
+	}
+
+	.cta-wrapper {
+		gap: 10px;
+	}
+
+	.footer-main-links h5 {
 		text-align: center;
 	}
 }
@@ -4689,22 +4757,27 @@ font-size: 16px;
 	.panel:not(:first-child) {
 		margin-top: 20px;
 	}
+
 	.end-point-card .web-dev-card {
-		padding:20px;
-}
-.service-faq .accordion-button {
-    font-size: 16px;
-	line-height: 26px;
-  }
-  .service-faq .main-para {
-    font-size: 14px;
-  }
-  .web-dev-card h4 {
-	font-size: 20px;
-  }
-  .product-list-container .service-card .service-card-cont p {
-   font-size: 14p;
-  }
+		padding: 20px;
+	}
+
+	.service-faq .accordion-button {
+		font-size: 16px;
+		line-height: 26px;
+	}
+
+	.service-faq .main-para {
+		font-size: 14px;
+	}
+
+	.web-dev-card h4 {
+		font-size: 20px;
+	}
+
+	.product-list-container .service-card .service-card-cont p {
+		font-size: 14p;
+	}
 
 }
 
@@ -4839,7 +4912,8 @@ font-size: 16px;
 	.tow-phase h4 {
 		font-size: 18px;
 	}
+
 	.tow-phase-div img {
-		border-radius:36px;
-	  }
+		border-radius: 36px;
+	}
 }

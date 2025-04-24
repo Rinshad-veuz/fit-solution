@@ -38,7 +38,7 @@ document.getElementById('toTopBtn').onclick = function () {
 
 
 
-
+AOS.init({});
 
 
 // gsap.from(".popular-blogs", {
@@ -85,6 +85,28 @@ gsap.from(".blog-tags a", {
 
 
 // slider js
+
+$(document).ready(function () {
+  const lenis = new Lenis({
+    smooth: true, // Enable smooth scrolling
+    duration: 1.2,
+  });
+
+  // Initialize Lenis
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+
+  $('.menu-toggle').on('click', function () {
+    $('.menu-toggle').toggleClass('active');
+
+  });
+});
+
+
+
 
 // // Initialize Lenis
 // function raf(time) {
@@ -181,12 +203,70 @@ gsap.to("#rotatingImage", {
 
 /* <!-- ==================== AOS ==================== --> */
 
-AOS.init({});
+
 
 /* <!-- ==================== AOS ==================== --> */
 
 
+$('.client-list1').owlCarousel({
+  loop: true,
 
+nav: false,
+dots:false,
+autoplay: true,
+autoplayTimeout: 2000, 
+autoplaySpeed: 2000,   
+smartSpeed: 2000,      
+responsive: {
+  
+  0: {
+      items:1
+  },
+  425: {
+      items: 2
+  },
+  768: {
+      items: 4
+  },
+  1000: {
+      items: 5
+  },
+  1200: {
+      items: 6
+  }
+}
+});
+
+
+
+
+$('.client-list2').owlCarousel({
+loop: true,
+nav: false,
+dots:false,
+autoplay: true,
+rtl:true,
+autoplayTimeout: 2000, 
+autoplaySpeed: 2000,   
+smartSpeed: 2000,      
+responsive:  {
+  0: {
+      items: 1
+  },
+  425: {
+      items: 2
+  },
+  768: {
+      items: 4
+  },
+  1000: {
+      items: 5
+  },
+  1200: {
+      items: 6
+  }
+}
+});
 
 
 
