@@ -3139,7 +3139,7 @@ input[type="number"] {
 
 /* <!-- ==================== Portfolio ==================== --> */
 
-  
+
 
 /* Portfolio Slider Styles */
 .portfolio-slider {
@@ -3175,24 +3175,7 @@ input[type="number"] {
 	height: 100%;
 	object-fit: cover;
 	transition: transform 0.5s ease;
-	max-width: 100%;
-	border-radius: 8px;
 }
-
-
-
-
-
-
-  
-/* 
-
-
-
-
-
-
-
 
 .item-content {
 	position: absolute;
