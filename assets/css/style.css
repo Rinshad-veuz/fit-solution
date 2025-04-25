@@ -4837,7 +4837,7 @@ align-items: center;
 		font-size: 14px;
 	  }
 }
-@media screen and (max-width:425px) {
+@media screen and (max-width:475px) {
 .portfolio-title {
     font-size: 20px !important;
     margin:0;
