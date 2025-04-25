@@ -3156,7 +3156,7 @@ input[type="number"] {
 .slider-track {
 	display: flex;
 	position: absolute;
-	top: 60px;
+	top: auto;
 	left: 0;
 	gap: 4rem;
 	padding: 2rem;
@@ -3209,7 +3209,10 @@ input[type="number"] {
 .slider-item .item-content p {
 	color: var(--primary-color);
 }
-
+.portfolio-title{
+	font-size: 34px !important;
+	margin-top: 10px;
+}
 
 /* <!-- ==================== products ==================== --> */
 
@@ -3882,8 +3885,8 @@ input[type="number"] {
 
 /* Continuous pulsing animation */
 .dwc-section-custom .dwc-section-box img {
-	animation: pulse 2s infinite ease-in-out;
-	width: 50px;
+	/* animation: pulse 2s infinite ease-in-out; */
+	width: 80px;
 }
 
 @keyframes pulse {
@@ -4307,7 +4310,29 @@ align-items: center;
 	font-weight: 400;
 	margin-bottom: 30px;
 }
+.cta-contact{
+	display: flex;
+  align-items: center;
+  gap:
+20px;
+}
+.cta-contact img{
+	width:70px;
+}
+.cta-number h6{
+	font-size: 16px;
+	font-weight: 500;
+	color: #fff;
+	margin: 0;
+	
+}
+.cta-number a{
 
+	font-size: 22px;
+	font-weight: 700;
+	color: #0f2923;
+
+}
 
 
 
@@ -4465,6 +4490,9 @@ align-items: center;
 	.product-img-custom img {
 		height: 300px;
 	}
+	.portfolio-title {
+		font-size: 28px !important;
+	  }
 }
 
 @media screen and (max-width:1100px) {
@@ -4567,6 +4595,24 @@ align-items: center;
 	.service-faq .accordion {
 		width: 100%;
 	}
+	.cta-contact img {
+		width: 60px;
+	  }
+	  .cta-cont{
+		width: 60%;
+	  }
+	  .cta-contact {
+		gap:10px;
+	  }
+	  .cta-wrapper h2 {
+		font-size: 29px;
+	  }
+	  .footer-main-links h5 {
+		text-align: center;
+	}
+	.slider-item {
+		height: 500px;
+	  }
 }
 
 @media screen and (max-width:768px) {
@@ -4707,10 +4753,13 @@ align-items: center;
 	.cta-wrapper {
 		gap: 10px;
 	}
-
-	.footer-main-links h5 {
-		text-align: center;
-	}
+	.cta-cont {
+		width: 100%;
+	  }
+	  .portfolio-title {
+		font-size: 22px !important;
+	  }
+	
 }
 
 @media screen and (max-width:600px) {
@@ -4778,9 +4827,32 @@ align-items: center;
 	.product-list-container .service-card .service-card-cont p {
 		font-size: 14p;
 	}
-
+	.cta-number a {
+		font-size: 20px;
+	  }
+	  .cta-contact img {
+		width: 54px;
+	  }
+	  .cta-number h6 {
+		font-size: 14px;
+	  }
 }
-
+@media screen and (max-width:425px) {
+.portfolio-title {
+    font-size: 20px !important;
+    margin:0;
+  }
+  .slider-track {
+	gap:
+  1rem;
+	padding:
+  15px;
+  }
+  .slider-item {
+    height: 355px;
+	width: 100vw;
+  }
+}
 @media screen and (max-width:425px) {
 	.popular-blogs a img {
 		max-width: 70px;
@@ -4868,7 +4940,7 @@ align-items: center;
 	}
 
 	.dwc-section-custom .dwc-section-box img {
-		width: 40px;
+		width: 60px;
 	}
 
 	.dwc-section-custom .dwc-section-box h5 {
