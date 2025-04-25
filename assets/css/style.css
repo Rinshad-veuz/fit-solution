@@ -3139,7 +3139,7 @@ input[type="number"] {
 
 /* <!-- ==================== Portfolio ==================== --> */
 
-
+  
 
 /* Portfolio Slider Styles */
 .portfolio-slider {
@@ -3175,7 +3175,48 @@ input[type="number"] {
 	height: 100%;
 	object-fit: cover;
 	transition: transform 0.5s ease;
+	max-width: 100%;
+	border-radius: 8px;
 }
+
+
+
+
+
+
+  
+.portfolio-slider {
+	position: relative;
+	height: 100vh; /* Necessary for ScrollTrigger pinning */
+	width: 100%;
+	overflow: hidden;
+  }
+  
+  .slider-track {
+	display: flex;
+	gap: 64px;
+	will-change: transform;
+  }
+  
+  .slider-item {
+	flex: 0 0 auto;
+	width: 600px;
+	height: 600px;
+	background: #222;
+	color: #fff;
+	border-radius: 12px;
+	/* padding: 20px; */
+	box-sizing: border-box;
+	transition: transform 0.3s ease;
+  }
+
+
+
+
+
+
+
+
 
 .item-content {
 	position: absolute;

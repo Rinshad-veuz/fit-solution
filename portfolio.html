@@ -16,7 +16,41 @@
   <link rel="icon" href="assets/img/fav.png" type="image/png">
   
 </head>
+<style>
 
+
+/* .portfolio-slider {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  gap: 64px;
+  will-change: transform;
+}
+
+.slider-item {
+  flex: 0 0 auto;
+  width: 600px;
+  height: 600px !important;
+  height: 100%;
+  background: #222;
+  color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.slider-item img {
+  max-width: 100%;
+  border-radius: 8px;
+} */
+
+</style>
 <body>
 
   <!-- body cursor -->
@@ -746,7 +780,7 @@
   </script>
 
 
-<script>
+<!-- <script>
   // Portfolio Slider Animation
   gsap.registerPlugin(ScrollTrigger);
 
@@ -793,7 +827,78 @@
       });
     });
   });
+</script> -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  function initPortfolioSlider() {
+    const sliderTrack = document.querySelector(".slider-track");
+    const sliderItems = document.querySelectorAll(".slider-item");
+
+    if (!sliderTrack || sliderItems.length === 0) return;
+
+    const itemWidth = sliderItems[0].offsetWidth;
+    const gap = 64;
+    const totalWidth = (itemWidth + gap) * sliderItems.length;
+
+    // Set track width
+    sliderTrack.style.width = `${totalWidth}px`;
+
+    // Kill existing ScrollTriggers if reloading on resize
+    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+
+    // Animate slider on scroll
+    gsap.to(sliderTrack, {
+      x: () => -(totalWidth - window.innerWidth),
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".portfolio-slider",
+        start: "top top",
+        end: () => `+=${totalWidth}`,
+        scrub: 1.5,
+        pin: true,
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
+        markers: false
+      }
+    });
+
+    // Hover effects
+    sliderItems.forEach(item => {
+      item.addEventListener("mouseenter", () => {
+        gsap.to(item, {
+          scale: 1.05,
+          duration: 0.3,
+          ease: "power2.out"
+        });
+      });
+
+      item.addEventListener("mouseleave", () => {
+        gsap.to(item, {
+          scale: 1,
+          duration: 0.3,
+          ease: "power2.out"
+        });
+      });
+    });
+  }
+
+  // Initial run
+  window.addEventListener("load", () => {
+    initPortfolioSlider();
+  });
+
+  // Recalculate on resize
+  window.addEventListener("resize", () => {
+    initPortfolioSlider();
+    ScrollTrigger.refresh();
+  });
 </script>
+
 
 
 <!-- <script>
@@ -827,7 +932,7 @@
 </script> -->
 
 
-  <script>
+  <!-- <script>
     AOS.init({
       disable: 'mobile'
     });
@@ -844,7 +949,7 @@
         navbar.classList.remove('scrolled');
       }
     });
-  </script>
+  </script> -->
 
 
   <!-- <script>
@@ -883,7 +988,7 @@
     requestAnimationFrame(raf)
   </script> -->
 
-  <script>
+  <!-- <script>
     const lenis = new Lenis();
 
     let isScrolling = false;
@@ -907,11 +1012,11 @@
     }
 
     requestAnimationFrame(raf);
-  </script>
+  </script> -->
 
 
 
-  <script>
+  <!-- <script>
     $(document).ready(function () {
       const lenis = new Lenis({
         smooth: true, // Enable smooth scrolling
@@ -1021,9 +1126,9 @@
     $(document).ready(function () {
       $('.nsd-menu-overlay').addClass('active');
     });
-  </script>
+  </script> -->
 
-  <script>
+  <!-- <script>
     $(function () {
       const svg = document.getElementById("svg");
       const tl = gsap.timeline();
@@ -1056,9 +1161,9 @@
         display: "none",
       });
     });
-  </script>
+  </script> -->
 
-  <script>
+  <!-- <script>
     $(document).ready(function () {
       $('.has-sub > a').click(function (e) {
         e.preventDefault();
@@ -1069,7 +1174,7 @@
     $(document).ready(function () {
       $('.nsd-menu-overlay').addClass('active'); // This will show the menu with a fade-in effect
     });
-  </script>
+  </script> -->
 
 
 
