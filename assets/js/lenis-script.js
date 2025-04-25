@@ -641,53 +641,102 @@ $(document).ready(function () {
           });
 
   
-          // Portfolio Slider Animation
-          gsap.registerPlugin(ScrollTrigger);
+          // // Portfolio Slider Animation
+          // gsap.registerPlugin(ScrollTrigger);
         
-          const sliderTrack = document.querySelector('.slider-track');
-          const sliderItems = document.querySelectorAll('.slider-item');
+          // const sliderTrack = document.querySelector('.slider-track');
+          // const sliderItems = document.querySelectorAll('.slider-item');
           
-          // Calculate the total width
-          const totalWidth = sliderItems.length * (600 + 64); // item width + gap
+          // // Calculate the total width
+          // const totalWidth = sliderItems.length * (600 + 64); // item width + gap
           
-          // Set the track width
-          sliderTrack.style.width = `${totalWidth}px`;
+          // // Set the track width
+          // sliderTrack.style.width = `${totalWidth}px`;
         
-          // Create the horizontal scroll animation
-          gsap.to('.slider-track', {
-            x: -totalWidth + window.innerWidth,
-            ease: "none",
-            scrollTrigger: {
-              trigger: ".portfolio-slider",
-              start: "top top",
-              end: `+=${totalWidth}`,
-              pin: true,
-              scrub: 2,
-              anticipatePin: 1,
-              invalidateOnRefresh: true,
-              markers: false
-            }
-          });
+          // // Create the horizontal scroll animation
+          // gsap.to('.slider-track', {
+          //   x: -totalWidth + window.innerWidth,
+          //   ease: "none",
+          //   scrollTrigger: {
+          //     trigger: ".portfolio-slider",
+          //     start: "top top",
+          //     end: `+=${totalWidth}`,
+          //     pin: true,
+          //     scrub: 2,
+          //     anticipatePin: 1,
+          //     invalidateOnRefresh: true,
+          //     markers: false
+          //   }
+          // });
         
-          // Add hover effects
-          sliderItems.forEach(item => {
-            item.addEventListener('mouseenter', () => {
-              gsap.to(item, {
-                scale: 1.05,
-                duration: 0.5,
-                ease: "power2.out"
-              });
-            });
+          // // Add hover effects
+          // sliderItems.forEach(item => {
+          //   item.addEventListener('mouseenter', () => {
+          //     gsap.to(item, {
+          //       scale: 1.05,
+          //       duration: 0.5,
+          //       ease: "power2.out"
+          //     });
+          //   });
         
-            item.addEventListener('mouseleave', () => {
-              gsap.to(item, {
-                scale: 1,
-                duration: 0.5,
-                ease: "power2.out"
-              });
-            });
-          });
+          //   item.addEventListener('mouseleave', () => {
+          //     gsap.to(item, {
+          //       scale: 1,
+          //       duration: 0.5,
+          //       ease: "power2.out"
+          //     });
+          //   });
+          // });
 
-  
+
+            // gsap.registerPlugin(ScrollTrigger);
+          
+            // window.addEventListener("load", () => {
+            //   const sliderTrack = document.querySelector(".slider-track");
+            //   const sliderItems = document.querySelectorAll(".slider-item");
+          
+            //   if (!sliderTrack || sliderItems.length === 0) return;
+          
+            //   const itemWidth = 600;
+            //   const gap = 64;
+            //   const totalWidth = sliderItems.length * (itemWidth + gap);
+          
+            //   sliderTrack.style.width = `${totalWidth}px`;
+          
+            //   gsap.to(sliderTrack, {
+            //     x: () => -(totalWidth - window.innerWidth),
+            //     ease: "none",
+            //     scrollTrigger: {
+            //       trigger: ".portfolio-slider",
+            //       start: "top top",
+            //       end: () => `+=${totalWidth}`,
+            //       pin: true,
+            //       scrub: 1.5,
+            //       anticipatePin: 1,
+            //       invalidateOnRefresh: true,
+            //       markers: false
+            //     }
+            //   });
+          
+            //   // Hover Effects
+            //   sliderItems.forEach(item => {
+            //     item.addEventListener('mouseenter', () => {
+            //       gsap.to(item, {
+            //         scale: 1.05,
+            //         duration: 0.3,
+            //         ease: "power2.out"
+            //       });
+            //     });
+            //     item.addEventListener('mouseleave', () => {
+            //       gsap.to(item, {
+            //         scale: 1,
+            //         duration: 0.3,
+            //         ease: "power2.out"
+            //       });
+            //     });
+            //   });
+            // });
+
+          
 
 
