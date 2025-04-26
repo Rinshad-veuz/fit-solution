@@ -3151,7 +3151,7 @@ input[type="number"] {
 
 .slider-container {
 	position: relative;
-	height: 100%;
+	height: 100vh;
 }
 
 .slider-track {
