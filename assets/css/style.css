@@ -4921,9 +4921,9 @@ align-items: center;
 	  .portfolio-container .portfolio-card h4{
 		font-size:18px;
 	}
-	.slider-container {
+	/* .slider-container {
 		height: 70vh;
-	  }
+	  } */
 }
 @media screen and (max-width:475px) {
 .portfolio-title {
@@ -5089,4 +5089,9 @@ align-items: center;
 	  .counter-box h6 {
 		font-size: 13px;
 	  }
+}
+@media screen and (max-width:375px) {
+.slider-item {
+    height: 300px;
+  }
 }
