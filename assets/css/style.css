@@ -3205,7 +3205,11 @@ input[type="number"] {
 }
 
 .portfolio-head {
-	padding-top: 80px;
+	padding-top: 30px;
+	/* position: absolute;
+  left: 50%;
+  top: 12%;
+  transform: translate(-50%, -50%); */
 }
 
 .slider-item .item-content h3 {
@@ -3218,7 +3222,9 @@ input[type="number"] {
 }
 .portfolio-title{
 	font-size: 34px !important;
-	margin-top: 10px;
+	/* margin-top: 10px; */
+	color: #fff !important;
+	width: 100vw;
 }
 
 /* <!-- ==================== products ==================== --> */
