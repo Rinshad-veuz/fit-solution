@@ -51,6 +51,18 @@
 }
 
 </style> -->
+<style>
+  .slider-item {
+  width: 80vw; /* 80% of viewport width */
+  max-width: 600px;
+  flex: 0 0 auto;
+}
+.slider-track {
+  display: flex;
+  gap: 64px;
+}
+
+</style>
 <body>
 
   <!-- body cursor -->
@@ -780,7 +792,7 @@
   </script>
 
 
-<script>
+<!-- <script>
   // Portfolio Slider Animation
   gsap.registerPlugin(ScrollTrigger);
 
@@ -827,9 +839,70 @@
       });
     });
   });
+</script> -->
+
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  const sliderTrack = document.querySelector('.slider-track');
+  const sliderItems = document.querySelectorAll('.slider-item');
+
+  function updateSlider() {
+    let itemWidth = sliderItems[0].offsetWidth;
+    let gap = parseFloat(getComputedStyle(sliderTrack).gap) || 0; // safer way
+    let totalWidth = sliderItems.length * (itemWidth + gap);
+
+    // Set the track width
+    sliderTrack.style.width = `${totalWidth}px`;
+
+    // Kill old ScrollTrigger if exists
+    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+
+    // Recreate horizontal scroll animation
+    gsap.to(sliderTrack, {
+      x: -totalWidth + window.innerWidth,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".portfolio-slider",
+        start: "top top",
+        end: () => `+=${totalWidth}`,
+        pin: true,
+        scrub: 2,
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
+        markers: false
+      }
+    });
+  }
+
+  // Initial setup
+  updateSlider();
+
+  // Recalculate on window resize
+  window.addEventListener('resize', () => {
+    updateSlider();
+  });
+
+  // Add hover effects
+  sliderItems.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      gsap.to(item, {
+        scale: 1.05,
+        duration: 0.5,
+        ease: "power2.out"
+      });
+    });
+
+    item.addEventListener('mouseleave', () => {
+      gsap.to(item, {
+        scale: 1,
+        duration: 0.5,
+        ease: "power2.out"
+      });
+    });
+  });
 </script>
-
-
 
 
 
