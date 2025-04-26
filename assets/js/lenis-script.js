@@ -537,9 +537,59 @@ $(document).ready(function () {
           }
       });
   
-  
+  // Show the button when the user scrolls down
+window.onscroll = function () {
+  var toTopBtn = document.getElementById('toTopBtn');
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    toTopBtn.style.display = 'block';
+  } else {
+    toTopBtn.style.display = 'none';
+  }
+};
+
+// Smooth scroll to top when the button is clicked
+document.getElementById('toTopBtn').onclick = function () {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+};
+
+/* <!-- ==================== To top Button ==================== --> */
 
 
+/* <!-- ==================== Cursor ==================== --> */
+
+let cursor = document.querySelector(".cursor");
+let cursor2 = document.querySelector(".cursor2");
+let cursorScale = document.querySelectorAll(".cursor-scale");
+let mouseX = 0;
+let mouseY = 0;
+
+gsap.to({}, 0.016, {
+  repeat: -1,
+  onRepeat: function () {
+    gsap.set(cursor, {
+      css: {
+        left: mouseX,
+        top: mouseY
+      }
+    });
+    gsap.set(cursor2, {
+      css: {
+        left: mouseX,
+        top: mouseY
+      }
+    });
+  }
+});
+
+window.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+/* <!-- ==================== Cursor ==================== --> */
 
           $(document).ready(function () {
               const $marqueeBlock = $(".marquee-block");

@@ -37,6 +37,66 @@ document.getElementById('toTopBtn').onclick = function () {
 /* <!-- ==================== To top Button ==================== --> */
 
 
+$('.client-list1').owlCarousel({
+  loop: true,
+
+nav: false,
+dots:false,
+autoplay: true,
+autoplayTimeout: 2000, 
+autoplaySpeed: 2000,   
+smartSpeed: 2000,      
+responsive: {
+  
+  0: {
+      items:1
+  },
+  425: {
+      items: 2
+  },
+  768: {
+      items: 4
+  },
+  1000: {
+      items: 5
+  },
+  1200: {
+      items: 6
+  }
+}
+});
+
+
+
+
+$('.client-list2').owlCarousel({
+loop: true,
+nav: false,
+dots:false,
+autoplay: true,
+rtl:true,
+autoplayTimeout: 2000, 
+autoplaySpeed: 2000,   
+smartSpeed: 2000,      
+responsive:  {
+  0: {
+      items: 1
+  },
+  425: {
+      items: 2
+  },
+  768: {
+      items: 4
+  },
+  1000: {
+      items: 5
+  },
+  1200: {
+      items: 6
+  }
+}
+});
+
 
 AOS.init({});
 
@@ -150,34 +210,34 @@ $(document).ready(function () {
 
 /* <!-- ==================== Cursor ==================== --> */
 
-// let cursor = document.querySelector(".cursor");
-// let cursor2 = document.querySelector(".cursor2");
-// let cursorScale = document.querySelectorAll(".cursor-scale");
-// let mouseX = 0;
-// let mouseY = 0;
+let cursor = document.querySelector(".cursor");
+let cursor2 = document.querySelector(".cursor2");
+let cursorScale = document.querySelectorAll(".cursor-scale");
+let mouseX = 0;
+let mouseY = 0;
 
-// gsap.to({}, 0.016, {
-//   repeat: -1,
-//   onRepeat: function () {
-//     gsap.set(cursor, {
-//       css: {
-//         left: mouseX,
-//         top: mouseY
-//       }
-//     });
-//     gsap.set(cursor2, {
-//       css: {
-//         left: mouseX,
-//         top: mouseY
-//       }
-//     });
-//   }
-// });
+gsap.to({}, 0.016, {
+  repeat: -1,
+  onRepeat: function () {
+    gsap.set(cursor, {
+      css: {
+        left: mouseX,
+        top: mouseY
+      }
+    });
+    gsap.set(cursor2, {
+      css: {
+        left: mouseX,
+        top: mouseY
+      }
+    });
+  }
+});
 
-// window.addEventListener("mousemove", (e) => {
-//   mouseX = e.clientX;
-//   mouseY = e.clientY;
-// });
+window.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
 
 /* <!-- ==================== Cursor ==================== --> */
 
@@ -207,66 +267,6 @@ gsap.to("#rotatingImage", {
 
 /* <!-- ==================== AOS ==================== --> */
 
-
-$('.client-list1').owlCarousel({
-  loop: true,
-
-nav: false,
-dots:false,
-autoplay: true,
-autoplayTimeout: 2000, 
-autoplaySpeed: 2000,   
-smartSpeed: 2000,      
-responsive: {
-  
-  0: {
-      items:1
-  },
-  425: {
-      items: 2
-  },
-  768: {
-      items: 4
-  },
-  1000: {
-      items: 5
-  },
-  1200: {
-      items: 6
-  }
-}
-});
-
-
-
-
-$('.client-list2').owlCarousel({
-loop: true,
-nav: false,
-dots:false,
-autoplay: true,
-rtl:true,
-autoplayTimeout: 2000, 
-autoplaySpeed: 2000,   
-smartSpeed: 2000,      
-responsive:  {
-  0: {
-      items: 1
-  },
-  425: {
-      items: 2
-  },
-  768: {
-      items: 4
-  },
-  1000: {
-      items: 5
-  },
-  1200: {
-      items: 6
-  }
-}
-});
 
 
 
@@ -559,42 +559,81 @@ $(document).ready(function () {
 
     /* <!-- ==================== Marquee ==================== --> */
 
+    // gsap.registerPlugin(ScrollTrigger);
 
+    // // Select all icons
+    // const icons = document.querySelectorAll('.icon-block');
+  
+    // // Create flipping animation
+    // icons.forEach((icon, index) => {
+    //   gsap.fromTo(
+    //     icon,
+    //     {
+    //       rotationY: 0,
+    //       scale: 1,
+    //     },
+    //     {
+    //       rotationY: 360,
+    //       scale: 1.1,
+    //       duration: 3,
+    //       repeat: -1,
+    //       ease: 'elastic.out(1, 0.3)', // Adds a realistic bounce effect
+    //       delay: index * 0.3, // Stagger animations
+    //     }
+    //   );
+  
+    //   // Hover effect for interaction
+    //   icon.addEventListener('mouseenter', () => {
+    //     gsap.to(icon, { scale: 1.3, duration: 0.3 });
+    //   });
+  
+    //   icon.addEventListener('mouseleave', () => {
+    //     gsap.to(icon, { scale: 1, duration: 0.3 });
+    //   });
+    // });
 
     /* <!-- ==================== Icon rotating ==================== --> */
 
-  gsap.registerPlugin(ScrollTrigger);
+//   gsap.registerPlugin(ScrollTrigger);
 
-  // Select all icons
-  const icons = document.querySelectorAll('.icon-block');
+// // Select all icons
+// const icons = document.querySelectorAll('.icon-block');
 
-  // Create flipping animation
-  icons.forEach((icon, index) => {
-    gsap.fromTo(
-      icon,
-      {
-        rotationY: 0,
-        scale: 1,
-      },
-      {
-        rotationY: 360,
-        scale: 1.1,
-        duration: 3,
-        repeat: -1,
-        ease: 'elastic.out(1, 0.3)', // Adds a realistic bounce effect
-        delay: index * 0.3, // Stagger animations
-      }
-    );
+// // Create flipping animation with ScrollTrigger for better performance
+// icons.forEach((icon, index) => {
+//   gsap.fromTo(
+//     icon,
+//     {
+//       rotationY: 0,
+//       scale: 1,
+//     },
+//     {
+//       rotationY: 360,
+//       scale: 1.1,
+//       duration: 3,
+//       repeat: -1,
+//       ease: 'elastic.out(1, 0.3)', // Adds a realistic bounce effect
+//       delay: index * 0.3, // Stagger animations
+//       scrollTrigger: {
+//         trigger: icon, // Only trigger when the icon is in view
+//         start: 'top 80%', // Start the animation when icon enters 80% of the viewport
+//         end: 'top 20%', // End when icon is out of view
+//         scrub: true, // Smooth scrub effect
+//         toggleActions: 'play none none none', // Play animation only once
+//       },
+//     }
+//   );
 
-    // Hover effect for interaction
-    icon.addEventListener('mouseenter', () => {
-      gsap.to(icon, { scale: 1.3, duration: 0.3 });
-    });
+//   // Hover effect for interaction
+//   icon.addEventListener('mouseenter', () => {
+//     gsap.to(icon, { scale: 1.3, duration: 0.3 });
+//   });
 
-    icon.addEventListener('mouseleave', () => {
-      gsap.to(icon, { scale: 1, duration: 0.3 });
-    });
-  });
+//   icon.addEventListener('mouseleave', () => {
+//     gsap.to(icon, { scale: 1, duration: 0.3 });
+//   });
+// });
+
 
 
 /* <!-- ==================== Icon rotating ==================== --> */

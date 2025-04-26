@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fit Solution</title>
-  <link rel="stylesheet" href="assets/css/aos.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sticky Products Section</title>
+
+
+  <!-- <link rel="stylesheet" href="assets/css/aos.css">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/font-awesome.css">
   <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
@@ -13,724 +14,64 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/fonts/webfont/stylesheet.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="icon" href="assets/img/fav.png" type="image/png">
-  
+  <link rel="icon" href="assets/img/fav.png" type="image/png"> -->
+
+
 </head>
-<style>
+
+      
 
 
-.portfolio-slider {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-}
 
-.slider-track {
-  display: flex;
-  gap: 64px;
-  will-change: transform;
-}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-.slider-item {
-  flex: 0 0 auto;
-  width: 600px;
-  height: 600px !important;
-  height: 100%;
-  background: #222;
-  color: #fff;
-  border-radius: 12px;
-  padding: 20px;
-  box-sizing: border-box;
-  transition: transform 0.3s ease;
-}
 
-.slider-item img {
-  max-width: 100%;
-  border-radius: 8px;
-}
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-</style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  
+
 <body>
 
-  <!-- body cursor -->
-  <div class="cursor"></div>
-  <div class="cursor2"></div>
-  <!-- body cursor -->
-  <button id="toTopBtn">
-    <img src="assets/img/arrow-right.svg" alt="">
-  </button>
-  <!-- ==================== Start Loading ==================== -->
-  <div class="loader-wrap">
-    <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
-      <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
-    </svg>
-
-    <div class="loader-wrap-heading">
-      <!-- Add the image here -->
-      <img src="assets/img/fit-loader.gif" alt="Loader Image" class="loader-image">
-      <div class="load-text">
-        <span>F</span>
-        <span>I</span>
-        <span>T</span>
-        <span>S</span>
-        <span>O</span>
-        <span>L</span>
-        <span>U</span>
-        <span>T</span>
-        <span>I</span>
-        <span>O</span>
-        <span>N</span>
-        <span>S</span>
-      </div>
-    </div>
-  </div>
-  <!-- ==================== End Loading ==================== -->
-
-  <div class="inner-banner">
-    <div class="nsd-menu-overlay z-20">
-      <div class="container m-auto py-10">
-        <div class="nsd-menu-overlay__content flex flex-wrap overflow-hidden nsd-menu-main">
-          <div class="nsd-menu-overlay__content_part nsd-menu-overlay__content_part__left menu-ab-custom">
-            <ul class="nsd-menu-fullscren">
-              <li class="fullscreen-single__item "><a href="index.html" class="__active">Home</a></li>
-              <li class="fullscreen-single__item"><a href="about.html">About us</a></li>
-              <li class="fullscreen-single__item has-sub menu-item-has-children">
-                <a href="services.html">
-                  <span>Services</span> <span class="menu-arrow"><i class="fa-solid fa-chevron-down"></i></span>
-                </a>
-                <ul class="sub-menu p-0">
-                  <li>
-                    <div class="service-list no-lenis">
-                      <div class="row">
-                        <div class="col-lg-4 col-md-6">
-                          <ul>
-                            <li class="sub-menu__inner">
-                              <a href="mobile-app.html">
-                                <span>Mobile Application Development </span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="website.html">
-                                <span>Website Development </span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="custom-software.html">
-                                <span>Custom Software Development</span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="aramco.html">
-                                <span> Aramco CCC+</span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="odoo.html">
-                                <span>Odoo ERP </span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="endpoint.html">
-                                <span>Endpoint Security </span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="e-invoicing.html">
-                                <span>E-invoicing software </span>
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                          <ul>
-                            <li class="sub-menu__inner">
-                              <a href="microsoft.html">
-                                <span>Microsoft 365 for Business </span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="google.html">
-                                <span>Google Workspace Managed Services </span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="manage-engine.html">
-                                <span>Manage Engine </span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="zoho-email.html">
-                                <span>Zoho Email Hosting </span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="salesforce.html">
-                                <span>Salesforce Implementation </span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="oracle.html">
-                                <span>Oracle EBS </span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="email-hosting.html">
-                                <span>Email Hosting </span>
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                          <ul>
-                            <li class="sub-menu__inner">
-                              <a href="website-hosting.html">
-                                <span>Web Hosting Services </span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="cyber.html">
-                                <span>Cybersecurity </span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="firewall.html">
-                                <span>Firewall Security Services </span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="digital-marketing.html">
-                                <span>Digital Marketing Services </span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="indutrial-training.html">
-                                <span>Industrial Training</span>
-                              </a>
-                            </li>
-                            <!-- <li style="position: static !important; margin-top: 10px; " class="sub-menu__inner">
-                              
-                              <div class="main-button">
-                                <div class="main-button">
-                                  <a href="services.html" class="button">
-                                    <span class="button__spotlight"></span>
-                                    <span class="button__wrapper">
-                                      <span class="button__text" style="letter-spacing: 0px !important;">All Services <img src="assets/img/arrow-right.svg" alt=""
-                                          class="button-arrow"></span>
-                                    </span>
-                                  </a>
-                                </div>
-                              </div>
-                            </li> -->
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <li class="fullscreen-single__item has-sub menu-item-has-children">
-                <a href="javascript:void(0)">
-                  <span>Products</span> <span class="menu-arrow"><i class="fa-solid fa-chevron-down"></i></span>
-                </a>
-                <ul class="sub-menu p-0">
-                  <li>
-                    <div class="service-list no-lenis">
-                      <div class="row">
-                        <div class="col-lg-4 col-md-6">
-                          <ul>
-                            <li class="sub-menu__inner">
-                              <a href="zatka-invoice.html">
-                                <span>Zatca E-Invoicing</span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="event-management.html">
-                                <span> Event Management Software</span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="crm.html">
-                                <span>CRM Software</span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="touch2scan.html">
-                                <span> Touch2Scan</span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="study-abroad.html">
-                                <span>Study Abroad Software</span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="rental-managment.html">
-                                <span>Rental Management</span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="fleet.html">
-                                <span>Fleet Management</span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="school-mngt.html">
-                                <span>School Management System</span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="library.html">
-                                <span> Library Management Software</span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="help-desk.html">
-                                <span>Help Desk</span>
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                          <ul>
-                            <li class="sub-menu__inner">
-                              <a href="delivery-managment.html">
-                                <span>Delivery Management</span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="erp-for-smes.html">
-                                <span> ERP for SMEs</span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="document-management.html">
-                                <span>Document Management</span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="project-task.html">
-                                <span> Project and Task Management </span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="subscription.html">
-                                <span>Subscription Management</span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="survey-management.html">
-                                <span> Survey Management</span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="visitors-desk.html">
-                                <span>Visitor Desk </span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="asset-management.html">
-                                <span> Asset Management</span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="recruitment-management.html">
-                                <span> Recruitment Management</span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="exam-management.html">
-                                <span> Exam Management </span>
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                          <ul>
-                            <li class="sub-menu__inner">
-                              <a href="procurement.html">
-                                <span>Procurement Management</span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="hr-and-payroll.html">
-                                <span> HR and Payroll Management</span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="e-signature.html">
-                                <span>E-Signature</span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="pos.html">
-                                <span>Point of Sales (POS)</span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="digi-menu.html">
-                                <span>Digi Menu</span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="property-management.html">
-                                <span>Property Management</span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="lms.html">
-                                <span> Learning Management System</span>
-                              </a>
-                            </li>
-                            <li class="sub-menu__inner">
-                              <a href="manufacturing-erp.html">
-                                <span> Manufacturing ERP</span>
-                              </a>
-                            </li>
-                            <!-- <li style="position: static !important; margin-top: 10px; " class="sub-menu__inner">
-                              
-                              <div class="main-button">
-                                <div class="main-button">
-                                  <a href="products.html" class="button">
-                                    <span class="button__spotlight"></span>
-                                    <span class="button__wrapper">
-                                      <span class="button__text" style="letter-spacing: 0px !important;">All Products <img src="assets/img/arrow-right.svg" alt=""
-                                          class="button-arrow"></span>
-                                    </span>
-                                  </a>
-                                </div>
-                              </div>
-                            </li> -->
-                           
-                          </ul>
-                        </div>
-                      </div>
-
-
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <li class="fullscreen-single__item"><a href="blog.html">Blogs</a></li>
-              <li class="fullscreen-single__item"><a href="contact.html">Contacts</a></li>
-            </ul>
-
-            <div class="sm-show-btn">
-              <div class="main-button">
-                <div class="main-button">
-                  <a href="enquiry.html" class="button">
-                    <span class="button__spotlight"></span>
-                    <span class="button__wrapper">
-                      <span class="button__text">Request a Quote <img src="assets/img/arrow-right.svg" alt=""
-                          class="button-arrow"></span>
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <nav>
-      <div id="navbar">
-        <div class="container">
-          <div class="nav-box">
-            <a href="index.html">
-              <img src="assets/img/logo.png" alt="" class="logo-width">
-            </a>
-
-            <div class="nav-right-box">
-              <div class="menu-toggle">
-                <div class="hamburger">
-                  <span class="menu-icon-w"></span>
-                  <span></span>
-                  <span class="menu-icon-w-2"></span>
-                </div>
-                <div class="cross">
-                  <span></span>
-                  <span></span>
-                </div>
-              </div>
-
-              <div class="main-button">
-                <a href="enquiry.html" class="button">
-                  <span class="button__spotlight"></span>
-                  <span class="button__wrapper">
-                    <span class="button__text">Request a Quote <img src="assets/img/arrow-right.svg" alt=""
-                        class="button-arrow"></span>
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
 
 
 
-    <div class="container">
-      <div class="inner-banner-text">
-        <h3>
-          Portfolio
-        </h3>
-
-        <nav>
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Home </a></li>
-            <li class="breadcrumb-item active" aria-current="page">Portfolio</li>
-          </ol>
-        </nav>
-
-      </div>
-    </div>
-
-  </div>
-
-  <!-- <section class="portfolio-head">
-   
-  </section> -->
 
 
-  <section class=" portfolio-slider">
-    <div class="slider-container">
-      <div class="portfolio-head container">
-        <div class="section-title">
     
-          <h6 class="reveal-type client-title portfolio-title" data-bg-color="#ffffff1c" data-fg-color="#fff">
-            We ensure value for our clients
-            </h6>
-  
-        </div>
-      </div>
-      <div class="slider-track">
-        <!-- Add your portfolio items here -->
-        <div class="slider-item">
-          <img src="assets/img/portfolio/tss.png" alt="Portfolio 1">
-          <div class="item-content">
-            <h3>Project Title 1</h3>
-            <p>Project Description</p>
-          </div>
-        </div>
-        <div class="slider-item">
-          <img src="assets/img/portfolio/rgs.png" alt="Portfolio 1">
-          <div class="item-content">
-            <h3>Project Title 2</h3>
-            <p>Project Description</p>
-          </div>
-        </div>
-        <div class="slider-item">
-          <img src="assets/img/portfolio/client-1.png" alt="Portfolio 1">
-          <div class="item-content">
-            <h3>Project Title 3</h3>
-            <p>Project Description</p>
-          </div>
-        </div>
-        <div class="slider-item">
-          <img src="assets/img/portfolio/client-2.png" alt="Portfolio 1">
-          <div class="item-content">
-            <h3>Project Title 4</h3>
-            <p>Project Description</p>
-          </div>
-        </div>
-        <div class="slider-item">
-          <img src="assets/img/portfolio/sumousalah.png" alt="Portfolio 1">
-          <div class="item-content">
-            <h3>Project Title 5</h3>
-            <p>Project Description</p>
-          </div>
-        </div>
 
-        <!-- <div class="slider-item">
-          <img src="assets/img/portfolio/project-11.webp" alt="Portfolio 1">
-          <div class="item-content">
-            <h3>Project Title 3</h3>
-            <p>Project Description</p>
-          </div>
-        </div>
-        <div class="slider-item">
-          <img src="assets/img/portfolio/project-19.webp" alt="Portfolio 1">
-          <div class="item-content">
-            <h3>Project Title 4</h3>
-            <p>Project Description</p>
-          </div>
-        </div>
-        <div class="slider-item">
-          <img src="assets/img/portfolio/project-9.webp" alt="Portfolio 1">
-          <div class="item-content">
-            <h3>Project Title 5</h3>
-            <p>Project Description</p>
-          </div>
-        </div> -->
-        <!-- Repeat slider-item for more projects -->
-      </div>
+
+  <div class="description panel blue">
+    <div><h1>Variable height stacked pinning</h1>
+      <p>Use pinning to layer panels on top of each other as you scroll.</p>
+      <div class="scroll-down">Scroll down<div class="arrow"></div></div>
     </div>
-  </section>
-
+  </div>
   
-
-
-
-
-
-  <!-- footer -->
-  <section class="footer">
-    <div class="container">
-      <hr class="footer-line">
-
-      <div class="cta-wrapper">
-        <div class="cta-cont">
-        <h2>
-          Ready To order Your Project ?
-          </h2>
-          <div class="footer-main-links">
-            <h5><a href="support@fridayinfotech.com">support@fridayinfotech.com</a></h5>
-          </div>
-        </div>
-        
-  <div class="bg"><svg width="320" height="135" viewBox="0 0 320 135" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M5.48873 267.853C9.84073 271.725 7.23273 269.613 154.945 319.181C158.227 320.274 161.775 320.274 165.057 319.181C304.001 271.997 308.545 273.165 314.529 267.853C316.39 266.113 317.866 264.004 318.865 261.661C319.584 259.857 319.969 257.938 320.001 255.997V63.9968C319.969 62.0555 319.584 60.1362 318.865 58.3328C317.866 55.9893 316.39 53.8803 314.529 52.1408C308.721 46.9888 305.457 48.3008 165.057 0.812773C161.775 -0.280364 158.227 -0.280364 154.945 0.812773C110.401 15.7408 12.5607 47.9968 8.67273 49.9968C7.51955 50.573 6.44427 51.2934 5.47273 52.1408C3.61112 53.883 2.1295 55.9911 1.12073 58.3328C0.407022 60.1372 0.0275118 62.0565 0.000732422 63.9968V255.997C0.0326085 257.938 0.41755 259.857 1.13673 261.661C2.14183 264.004 3.62395 266.113 5.48873 267.853ZM288.001 233.789L229.057 214.157C225.025 212.816 220.627 213.131 216.828 215.034C213.029 216.936 210.142 220.269 208.801 224.301C207.46 228.332 207.775 232.731 209.678 236.53C211.58 240.328 214.913 243.216 218.945 244.557L253.409 255.997L176.001 281.789V123.533L288.001 86.2048V233.789ZM160.001 32.8608L253.409 63.9968L160.001 95.1328L66.5927 63.9968L160.001 32.8608ZM32.0007 86.2048L144.001 123.533V281.789L66.5927 255.997L101.057 244.509C105.088 243.168 108.422 240.28 110.324 236.482C112.226 232.683 112.542 228.284 111.201 224.253C109.86 220.221 106.972 216.888 103.174 214.986C99.3749 213.083 94.976 212.768 90.9447 214.109L32.0007 233.789V86.2048Z" fill="currentColor"></path>
-</svg></div>
-
-          <div class="cta-contact">
-            <img src="assets/img/contact.png" alt="">
-            <div class="cta-number">
-              <h6>Contact Number</h6>
-              <a href="tel:+973 34453311">+973 34453311</a>
-            </div>
-          </div>
-      </div>
-      <div class="row mt-md-5 mt-2 mb-3 d-flex ">
-        <div class="col-lg-4">
-          <img src="assets/img/logo.png" alt="" class="logo-width mb-3">
-
-          <p class="footer-para">
-            Fit Solutions is a software development company, renowned for delivering innovative and customized
-            technology solutions.
-          </p>
-
-          <div class="footer-icons">
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fa-brands fa-x-twitter"></i>
-            <i class="fa-brands fa-linkedin-in"></i>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-12 d-md-flex justify-content-lg-between">
-          <div class="footer-list ">
-            <div class="footer-links ">
-              <h6>Quik Links</h6>
-              <ul>
-                <li>
-                  <a href="index.html">Home</a>
-                </li>
-                <li>
-                  <a href="about.html">About us</a>
-                </li>
-                <li>
-                  <a href="services.html">Services</a>
-                </li>
-                <li>
-                  <a href="products.html">Products</a>
-                </li>
-                <li>
-                  <a href="blog.html">Blogs</a>
-                </li>
-                <li>
-                  <a href="blog.html">Portfolio</a>
-                </li>
-                <li>
-                  <a href="contact.html">Contact us</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer-links">
-              <h6>Services</h6>
-              <ul>
-                <li>
-                  <a href="aramco.html">Aramco CCC/CCC+</a>
-                </li>
-                <li>
-                  <a href="mobile-app.html">Mobile App Development</a>
-                </li>
-                <li>
-                  <a href="odoo.html">Odoo Development</a>
-                </li>
-                <li>
-                  <a href="website.html">Website Development</a>
-                </li>
-                <li>
-                  <a href="microsoft.html">Microsoft Office 365</a>
-                </li>
-                <li>
-                  <a href="cyber.html">Cybersecurity</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer-links">
-              <h6>Products</h6>
-              <ul>
-                <li>
-                  <a href="zatka-invoice.html">Zatca E-Invoicing</a>
-                </li>
-                <li>
-                  <a href="crm.html">CRM</a>
-                </li>
-                <li>
-                  <a href="event-management.html">EventXPro</a>
-                </li>
-                <li>
-                  <a href="touch2scan.html">Touch2Scan</a>
-                </li>
-                <li>
-                  <a href="study-abroad.html">Study Abroad</a>
-                </li>
-                <li>
-                  <a href="property-management.html">Property Management</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-2 d-flex justify-content-lg-end justify-content-start">
-          <div class="main-button">
-            <a href="#" class="button">
-              <span class="button__spotlight"></span>
-              <span class="button__wrapper">
-                <span class="button__text"> Explore More <img src="assets/img/arrow-right.svg" alt=""
-                    class="button-arrow"></span>
-              </span>
-            </a>
-            <img src="assets/img/map.svg" alt="" class="footer-map">
-          </div>
-        </div>
-      </div>
-
-      <!-- <div class="row mt-md-5 mt-2">
-       
+  
+  <section class="panel red">
+    ONE
+  </section>
+  <section class="panel orange" style="height: 220vh;color: #000;">
+    TWO
+  </section>
+  <section class="panel purple" style="height: 50vh; color: blue;">
+    THREE
+  </section>
+  <section class="panel green">
+    FOUR
+  </section>
+  
+  
+  
+  
+    
       
-        <div class="col-lg-2">
-          <img src="assets/img/map.svg" alt="" class="footer-map">
-        </div>
-      </div> -->
-      <hr class="footer-line">
-      <div class="footer-divider">
-        <ul>
-          <li>© FIT SOLUTIONS 2025/ All rights reserved.</li>
-        </ul>
-        <ul class="footer-btm-links">
-          <li class="ft-divider"><a href="#">Privacy Policy</a></li>
-          <li class="ft-divider"><a href="#">Terms and Conditions</a></li>
-          <li><a href="#">Sitemap</a></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-  <!-- footer -->
-
-
-
+ 
+  
   <script src="assets/js/aos.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
   <script src="assets/js/jquery.min.js"></script>
@@ -743,442 +84,109 @@
   <script src="assets/js/ScrollTrigger.min.js"></script>
   <script src="assets/js/split-type.js"></script>
   <script src="assets/js/lenis-script.js"></script>
-
-
-
-  
-  <script>
-          let cursor = document.querySelector(".cursor");
-      let cursor2 = document.querySelector(".cursor2");
-      let cursorScale = document.querySelectorAll(".cursor-scale");
-      let mouseX = 0;
-      let mouseY = 0;
-
-      gsap.to({}, 0.016, {
-        repeat: -1,
-        onRepeat: function () {
-          gsap.set(cursor, {
-            css: {
-              left: mouseX,
-              top: mouseY
-            }
-          });
-          gsap.set(cursor2, {
-            css: {
-              left: mouseX,
-              top: mouseY
-            }
-          });
-        }
-      });
-
-      window.addEventListener("mousemove", (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-      });
-
-  </script>
-
-
-<!-- <script>
-  // Portfolio Slider Animation
-  gsap.registerPlugin(ScrollTrigger);
-
-  const sliderTrack = document.querySelector('.slider-track');
-  const sliderItems = document.querySelectorAll('.slider-item');
-  
-  // Calculate the total width
-  const totalWidth = sliderItems.length * (600 + 64); // item width + gap
-  
-  // Set the track width
-  sliderTrack.style.width = `${totalWidth}px`;
-
-  // Create the horizontal scroll animation
-  gsap.to('.slider-track', {
-    x: -totalWidth + window.innerWidth,
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".portfolio-slider",
-      start: "top top",
-      end: `+=${totalWidth}`,
-      pin: true,
-      scrub: 2,
-      anticipatePin: 1,
-      invalidateOnRefresh: true,
-      markers: false
-    }
-  });
-
-  // Add hover effects
-  sliderItems.forEach(item => {
-    item.addEventListener('mouseenter', () => {
-      gsap.to(item, {
-        scale: 1.05,
-        duration: 0.5,
-        ease: "power2.out"
-      });
-    });
-
-    item.addEventListener('mouseleave', () => {
-      gsap.to(item, {
-        scale: 1,
-        duration: 0.5,
-        ease: "power2.out"
-      });
-    });
-  });
-</script> -->
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- GSAP Animation Script -->
 
 <script>
-  gsap.registerPlugin(ScrollTrigger);
+    
 
-  function initPortfolioSlider() {
-    const sliderTrack = document.querySelector(".slider-track");
-    const sliderItems = document.querySelectorAll(".slider-item");
+gsap.registerPlugin(ScrollTrigger);
 
-    if (!sliderTrack || sliderItems.length === 0) return;
+let panels = gsap.utils.toArray(".panel");
+// we'll create a ScrollTrigger for each panel just to track when each panel's top hits the top of the viewport (we only need this for snapping)
+let tops = panels.map(panel => ScrollTrigger.create({trigger: panel, start: "top top"}));
 
-    const itemWidth = sliderItems[0].offsetWidth;
-    const gap = 64;
-    const totalWidth = (itemWidth + gap) * sliderItems.length;
+panels.forEach((panel, i) => {
+  ScrollTrigger.create({
+    trigger: panel,
+    start: () => panel.offsetHeight < window.innerHeight ? "top top" : "bottom bottom", // if it's shorter than the viewport, we prefer to pin it at the top
+    pin: true, 
+    pinSpacing: false 
+  });
+});
 
-    // Set track width
-    sliderTrack.style.width = `${totalWidth}px`;
-
-    // Kill existing ScrollTriggers if reloading on resize
-    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-
-    // Animate slider on scroll
-    gsap.to(sliderTrack, {
-      x: () => -(totalWidth - window.innerWidth),
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".portfolio-slider",
-        start: "top top",
-        end: () => `+=${totalWidth}`,
-        scrub: 1.5,
-        pin: true,
-        anticipatePin: 1,
-        invalidateOnRefresh: true,
-        markers: false
-      }
-    });
-
-    // Hover effects
-    sliderItems.forEach(item => {
-      item.addEventListener("mouseenter", () => {
-        gsap.to(item, {
-          scale: 1.05,
-          duration: 0.3,
-          ease: "power2.out"
-        });
-      });
-
-      item.addEventListener("mouseleave", () => {
-        gsap.to(item, {
-          scale: 1,
-          duration: 0.3,
-          ease: "power2.out"
-        });
-      });
-    });
+ScrollTrigger.create({
+  snap: {
+    snapTo: (progress, self) => {
+      let panelStarts = tops.map(st => st.start), // an Array of all the starting scroll positions. We do this on each scroll to make sure it's totally responsive. Starting positions may change when the user resizes the viewport
+          snapScroll = gsap.utils.snap(panelStarts, self.scroll()); // find the closest one
+      return gsap.utils.normalize(0, ScrollTrigger.maxScroll(window), snapScroll); // snapping requires a progress value, so convert the scroll position into a normalized progress value between 0 and 1
+    },
+    duration: 0.5
   }
+});
 
-  // Initial run
-  window.addEventListener("load", () => {
-    initPortfolioSlider();
-  });
 
-  // Recalculate on resize
-  window.addEventListener("resize", () => {
-    initPortfolioSlider();
-    ScrollTrigger.refresh();
-  });
+
+// 💚 This just adds the GSAP link to this pen, don't copy this bit
+import { GSAPInfoBar } from "https://codepen.io/GreenSock/pen/vYqpyLg.js"
+new GSAPInfoBar({ link: "https://gsap.com/docs/v3/Plugins/ScrollTrigger/", position:'top'});
+// 💚 Happy tweening!
+
+
 </script>
 
 
-
-<!-- <script>
-      const buttons = document.querySelectorAll('.button');
-
-    buttons.forEach(button => {
-      button.addEventListener('mousemove', function(evt) {
-        const movX = evt.clientX - this.getBoundingClientRect().x;
-        const movY = evt.clientY - this.getBoundingClientRect().y;
-
-        gsap.to(this.querySelector(".button__spotlight"), {
-          x: movX,
-          y: movY,
-          scale: 30,
-          duration: 0.3,
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+    
+        gsap.utils.toArray('.service-box').forEach((box, index) => {
+          gsap.to(box, {
+            scrollTrigger: {
+              trigger: box,
+              start: "top 85%",
+              toggleActions: "play none none none",
+            },
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            delay: index * 0.1
+          });
+    
+          // Initially set transform
+          gsap.set(box, {
+            y: 50,
+            opacity: 0
+          });
         });
-      });
-
-      button.addEventListener('mouseleave', function(evt) {
-        const movX = evt.clientX - this.getBoundingClientRect().x;
-        const movY = evt.clientY - this.getBoundingClientRect().y;
-
-        gsap.to(this.querySelector(".button__spotlight"), {
-          x: movX,
-          y: movY,
-          scale: 0,
-          duration: 0.3,
-        });
-      });
-    });
-</script> -->
-
-
-  <!-- <script>
-    AOS.init({
-      disable: 'mobile'
-    });
-  </script>
-
-
+      </script>
   <script>
-    const navbar = document.getElementById('navbar');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    });
-  </script> -->
-
-
-  <!-- <script>
-    gsap.registerPlugin(ScrollTrigger)
-
-    const splitTypes = document.querySelectorAll('.reveal-type')
-
-    splitTypes.forEach((char, i) => {
-
-      const bg = char.dataset.bgColor
-      const fg = char.dataset.fgColor
-
-      const text = new SplitType(char, {
-        types: 'chars'
-      })
-
-      gsap.fromTo(text.chars, {
-        color: bg,
-      }, {
-        color: fg,
-        duration: 0.3,
-        stagger: 0.02,
-        scrollTrigger: {
-          trigger: char,
-          start: 'top 90%',
-          end: 'bottom 40%',
-          scrub: true,
-          markers: false,
-          toggleActions: 'play play reverse reverse'
-        }
-      })
-    })
-
-
-
-    requestAnimationFrame(raf)
-  </script> -->
-
-  <!-- <script>
-    const lenis = new Lenis();
-
-    let isScrolling = false;
-    const scrollDelay = 100;
-
-    lenis.on('scroll', (e) => {
-      if (!isScrolling) {
-        isScrolling = true;
-
-        console.log(`Scroll event:`, e);
-
-        setTimeout(() => {
-          isScrolling = false;
-        }, scrollDelay);
-      }
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  </script> -->
-
-
-
-  <!-- <script>
-    $(document).ready(function () {
-      const lenis = new Lenis({
-        smooth: true, // Enable smooth scrolling
-        duration: 1.2,
-      });
-
-      // Initialize Lenis
-      function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      }
-      requestAnimationFrame(raf);
-
-      $('.menu-toggle').on('click', function () {
-        $('.menu-toggle').toggleClass('active');
-
-      });
-
-      // GSAP Header Overlay Animation
-      const headerOverlay = gsap.timeline({
-        paused: true
-      });
-
-      if ($(".nsd-menu-overlay")[0]) {
-        setupHeaderAnimation();
-      }
-
-      initializeSubmenu();
-
-      function initializeSubmenu() {
-        var menuItemWithChild = $(".nsd-menu-fullscren .has-sub > a");
-
-        menuItemWithChild.on('click', function (e) {
-          e.preventDefault();
-
-          var thisItem = $(this),
-            thisItemParent = thisItem.parent(),
-            submenu = thisItemParent.find('> ul.sub-menu'),
-            thisItemParentSiblings = thisItemParent.siblings('.has-sub');
-
-          if (submenu.is(':visible')) {
-            submenu.slideUp(); // Hide submenu
-            thisItemParent.removeClass('open_sub'); // Remove active class
-          } else {
-            thisItemParent.addClass('open_sub'); // Add active class to the clicked item
-            submenu.slideDown(); // Show submenu
-
-            // Close all sibling submenus
-            thisItemParentSiblings.removeClass('open_sub').find('> ul.sub-menu').slideUp();
-          }
-
-          return false;
+    document.addEventListener('DOMContentLoaded', function() {
+        // Register ScrollTrigger plugin
+        gsap.registerPlugin(ScrollTrigger);
+        
+        // Select all service boxes
+        const serviceBoxes = gsap.utils.toArray('.service-box');
+        
+        // Animate each service box
+        serviceBoxes.forEach((box, index) => {
+            gsap.from(box, {
+                opacity: 0,
+                y: 50,
+                duration: 0.8,
+                delay: index * 0.1,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: box,
+                    start: "top 80%",
+                    toggleActions: "play none none none",
+                    // Uncomment if you want boxes to animate only once
+                    // once: true
+                }
+            });
         });
-      }
-
-      function setupHeaderAnimation() {
-        gsap.set(".nsd-menu-overlay", {
-          yPercent: -100
+        
+        // Optional: Add hover effects
+        serviceBoxes.forEach(box => {
+            box.addEventListener('mouseenter', () => {
+                gsap.to(box, { scale: 1.02, duration: 0.3 });
+            });
+            box.addEventListener('mouseleave', () => {
+                gsap.to(box, { scale: 1, duration: 0.3 });
+            });
         });
-        gsap.set(".nsd-menu-overlay__content_part__left", {
-          yPercent: 100
-        });
-        gsap.set(".nsd-menu-overlay__content_part__left ul .fullscreen-single__item", {
-          rotate: 0,
-          y: 250,
-          skewY: 0,
-        });
-
-        headerOverlay
-          .to(".nsd-menu-overlay", {
-            yPercent: 0,
-            duration: 1
-          })
-          .to(".nsd-menu-overlay__content_part__left", {
-            yPercent: 0,
-            duration: 1
-          }, "-=1")
-          .to(".nsd-menu-overlay__content_part__left ul .fullscreen-single__item", {
-            opacity: 1,
-            rotate: 0,
-            y: 0,
-            skewY: 0,
-            stagger: 0.2,
-            duration: 0.5,
-          }, "-=0.5")
-          .to(".nsd-menu-overlay__content_part__right", {
-            y: 0,
-            opacity: 1,
-            duration: 0.5,
-          }, "-=0.5");
-
-        headerOverlay.reverse();
-
-        $(document).on("click", ".menu-toggle", function () {
-          headerOverlay.reversed(!headerOverlay.reversed());
-        });
-      }
     });
-
-    $(document).ready(function () {
-      $('.has-sub > a').click(function (e) {
-        e.preventDefault();
-        var submenu = $(this).siblings('.sub-menu');
-        submenu.toggleClass('active');
-      });
-    });
-    $(document).ready(function () {
-      $('.nsd-menu-overlay').addClass('active');
-    });
-  </script> -->
-
-  <!-- <script>
-    $(function () {
-      const svg = document.getElementById("svg");
-      const tl = gsap.timeline();
-      const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
-      const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
-
-      tl.to(".loader-wrap-heading .load-text, .loader-wrap-heading .cont, .loader-image", {
-        delay: 1.5,
-        y: -100,
-        opacity: 0,
-      });
-      tl.to(svg, {
-        duration: 0.5,
-        attr: {
-          d: curve
-        },
-        ease: "power2.easeIn",
-      }).to(svg, {
-        duration: 0.5,
-        attr: {
-          d: flat
-        },
-        ease: "power2.easeOut",
-      });
-      tl.to(".loader-wrap", {
-        y: -1500,
-      });
-      tl.to(".loader-wrap", {
-        zIndex: -1,
-        display: "none",
-      });
-    });
-  </script> -->
-
-  <!-- <script>
-    $(document).ready(function () {
-      $('.has-sub > a').click(function (e) {
-        e.preventDefault();
-        var submenu = $(this).siblings('.sub-menu');
-        submenu.toggleClass('active'); // Toggle the 'active' class for showing or hiding
-      });
-    });
-    $(document).ready(function () {
-      $('.nsd-menu-overlay').addClass('active'); // This will show the menu with a fade-in effect
-    });
-  </script> -->
-
-
-
+</script>
 
 </body>
-
 </html>
