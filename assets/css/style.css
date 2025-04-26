@@ -955,6 +955,7 @@ img {
 .why-choose-us {
 	position: relative;
 	padding-top: 200px;
+	overflow: hidden;
 }
 
 .ab-why-choose-us {

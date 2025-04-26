@@ -51,7 +51,7 @@ responsive: {
   0: {
       items:1
   },
-  425: {
+  375: {
       items: 2
   },
   768: {
@@ -82,7 +82,7 @@ responsive:  {
   0: {
       items: 1
   },
-  425: {
+  375: {
       items: 2
   },
   768: {
