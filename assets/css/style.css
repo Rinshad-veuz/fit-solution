@@ -4823,6 +4823,11 @@ align-items: center;
 	  .cta-wrapper .bg {
 		left: 20%;
 	  }
+	  .left-cont {
+		position: -webkit-initial;
+		position: initial;
+		margin-bottom: 30px;
+	  }
 	
 }
 
@@ -5058,5 +5063,8 @@ align-items: center;
 	.portfolio-container .portfolio-card p {
 		font-size: 14px;
 		line-height: 24px;
+	  }
+	  .left-cont {
+		margin-bottom: 20px;
 	  }
 }
