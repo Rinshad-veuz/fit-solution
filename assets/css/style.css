@@ -3156,11 +3156,17 @@ input[type="number"] {
 
 .slider-track {
 	display: flex;
-	position: absolute;
+	/* position: absolute;
 	top: auto;
-	left: 0;
+	left: 0; */
 	gap: 4rem;
 	padding: 2rem;
+}
+.portfolio-sec{
+	position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .slider-item {
@@ -4925,6 +4931,9 @@ align-items: center;
     height: 355px;
 	width: 100vw;
   }
+  /* .portfolio-head {
+    padding-top: 40px;
+} */
 }
 @media screen and (max-width:425px) {
 	.popular-blogs a img {
