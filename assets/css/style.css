@@ -5068,4 +5068,7 @@ align-items: center;
 	  .left-cont {
 		margin-bottom: 20px;
 	  }
+	  .counter-box h6 {
+		font-size: 13px;
+	  }
 }
