@@ -3222,9 +3222,9 @@ input[type="number"] {
 }
 .portfolio-title{
 	font-size: 34px !important;
-	/* margin-top: 10px; */
 	color: #fff !important;
 	width: 100vw;
+	font-weight: 700 !important;
 }
 
 /* <!-- ==================== products ==================== --> */
@@ -4841,6 +4841,10 @@ align-items: center;
 		position: initial;
 		margin-bottom: 30px;
 	  }
+	  .cursor,
+	  .cursor2{
+		  display: none;
+	  }
 	
 }
 
@@ -4921,9 +4925,7 @@ align-items: center;
 	  .portfolio-container .portfolio-card h4{
 		font-size:18px;
 	}
-	/* .slider-container {
-		height: 70vh;
-	  } */
+
 }
 @media screen and (max-width:475px) {
 .portfolio-title {
@@ -4940,9 +4942,11 @@ align-items: center;
     height: 355px;
 	width: 100vw;
   }
-  /* .portfolio-head {
-    padding-top: 40px;
-} */
+  #toTopBtn {
+    height: 45px;
+    width: 45px;
+    font-size: 11px;
+}
 }
 @media screen and (max-width:425px) {
 	.popular-blogs a img {

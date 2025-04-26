@@ -597,42 +597,42 @@ $(document).ready(function () {
 //   gsap.registerPlugin(ScrollTrigger);
 
 // // Select all icons
-// const icons = document.querySelectorAll('.icon-block');
+const icons = document.querySelectorAll('.icon-block');
 
-// // Create flipping animation with ScrollTrigger for better performance
-// icons.forEach((icon, index) => {
-//   gsap.fromTo(
-//     icon,
-//     {
-//       rotationY: 0,
-//       scale: 1,
-//     },
-//     {
-//       rotationY: 360,
-//       scale: 1.1,
-//       duration: 3,
-//       repeat: -1,
-//       ease: 'elastic.out(1, 0.3)', // Adds a realistic bounce effect
-//       delay: index * 0.3, // Stagger animations
-//       scrollTrigger: {
-//         trigger: icon, // Only trigger when the icon is in view
-//         start: 'top 80%', // Start the animation when icon enters 80% of the viewport
-//         end: 'top 20%', // End when icon is out of view
-//         scrub: true, // Smooth scrub effect
-//         toggleActions: 'play none none none', // Play animation only once
-//       },
-//     }
-//   );
+// Create flipping animation with ScrollTrigger for better performance
+icons.forEach((icon, index) => {
+  gsap.fromTo(
+    icon,
+    {
+      rotationY: 0,
+      scale: 1,
+    },
+    {
+      rotationY: 360,
+      scale: 1.1,
+      duration: 3,
+      repeat: -1,
+      ease: 'elastic.out(1, 0.3)', // Adds a realistic bounce effect
+      delay: index * 0.3, // Stagger animations
+      scrollTrigger: {
+        trigger: icon, // Only trigger when the icon is in view
+        start: 'top 80%', // Start the animation when icon enters 80% of the viewport
+        end: 'top 20%', // End when icon is out of view
+        scrub: true, // Smooth scrub effect
+        toggleActions: 'play none none none', // Play animation only once
+      },
+    }
+  );
 
-//   // Hover effect for interaction
-//   icon.addEventListener('mouseenter', () => {
-//     gsap.to(icon, { scale: 1.3, duration: 0.3 });
-//   });
+  // Hover effect for interaction
+  icon.addEventListener('mouseenter', () => {
+    gsap.to(icon, { scale: 1.3, duration: 0.3 });
+  });
 
-//   icon.addEventListener('mouseleave', () => {
-//     gsap.to(icon, { scale: 1, duration: 0.3 });
-//   });
-// });
+  icon.addEventListener('mouseleave', () => {
+    gsap.to(icon, { scale: 1, duration: 0.3 });
+  });
+});
 
 
 
