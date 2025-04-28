@@ -558,25 +558,46 @@ $(document).ready(function () {
 
   /* <!-- ==================== Marquee ==================== --> */
 
+    // $(document).ready(function () {
+    //   const $marqueeBlock = $(".marquee-block");
+    //   const $marqueeList = $(".marquee-item-list");
+
+    //   // Clone marquee content once for seamless scrolling
+    //   $marqueeList.clone().appendTo($marqueeBlock);
+
+    //   // Trigger animation
+    //   const animateMarquee = () => {
+    //     const scrollWidth = $marqueeBlock[0].scrollWidth / 2; // Width of one cycle
+    //     const animationDuration = 10; // Adjust duration for speed (seconds)
+
+    //     $marqueeBlock.css({
+    //       animation: `marquee ${animationDuration}s linear infinite`,
+    //     });
+    //   };
+
+    //   animateMarquee();
+    // });
+
+
+
     $(document).ready(function () {
       const $marqueeBlock = $(".marquee-block");
       const $marqueeList = $(".marquee-item-list");
-
-      // Clone marquee content once for seamless scrolling
-      $marqueeList.clone().appendTo($marqueeBlock);
-
-      // Trigger animation
-      const animateMarquee = () => {
-        const scrollWidth = $marqueeBlock[0].scrollWidth / 2; // Width of one cycle
-        const animationDuration = 10; // Adjust duration for speed (seconds)
-
-        $marqueeBlock.css({
-          animation: `marquee ${animationDuration}s linear infinite`,
-        });
-      };
-
-      animateMarquee();
+    
+      // Clone the list for seamless scroll
+      const $clonedList = $marqueeList.clone();
+      $marqueeBlock.append($clonedList);
+    
+      const listWidth = $marqueeList.width(); // Actual full width
+      const totalWidth = listWidth * 2; // because we clone it once
+    
+      // Set dynamic width for scrolling
+      $marqueeBlock.css({
+        "--totalWidth": totalWidth + "px",
+        "--scrollSpeed": (totalWidth / 250) + "s", // adjust speed here
+      });
     });
+    
 
 
     /* <!-- ==================== Marquee ==================== --> */
