@@ -4600,7 +4600,6 @@ color: #fff;
 	width: 80%;
 	margin: 0 auto;
 	border-radius: 20px;
-	box-shadow: 0 19px 47px 0 rgba(47, 50, 125, 0.1);
 background: #343434;
 border: none;
 }
@@ -4621,9 +4620,9 @@ margin: 0 auto
 .manage-service-card .web-dev-card p{
 	text-align: center;
 }
-.card-marging{
-	margin: 40px 0;
-}
+.card-marging {
+	margin:55px 0 0;
+  }
 
 @media screen and (max-width:1400px) {
 	.nsd-menu-overlay {
@@ -4818,6 +4817,19 @@ margin: 0 auto
 	  .enterprise-container .enterprise-box {
 		padding:15px 20px;
 		margin:10px 0;
+	  }
+	  .manage-service-card .web-dev-card {
+		width: 95%;
+	  }
+	  .card-marging {
+		margin:
+	  30px 0 0;
+	  }
+	  .manage-service-card .web-dev-card h3 {
+		font-weight: 700;
+		font-size: 26px;
+		background-color: rgba(238, 176, 68, 0.54);
+		padding:15px;
 	  }
 }
 
@@ -5159,6 +5171,16 @@ margin: 0 auto
 	  .bg-custom-sec {
 		padding:30px 0;
 		border-radius: 0;
+	  }
+	  .web-dev-card h4 {
+		font-size: 19px;
+	  }
+	  .manage-service-card .web-dev-card {
+		width: 100%;
+		padding: 15px;
+	  }
+	  .manage-service-card .web-dev-card h3 {
+		font-size: 22px;
 	  }
 
 }
