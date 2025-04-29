@@ -909,7 +909,7 @@ img {
 }
 
 .section-title {
-	margin-bottom: 15px;
+	margin-bottom: 25px;
 }
 
 .section-title h4 {
@@ -3859,7 +3859,7 @@ input[type="number"] {
 }
 
 .tecanologies-sec img {
-	width: 160px;
+	width: 130px;
 }
 
 .tecanologies-container {
@@ -4167,7 +4167,7 @@ align-items: center;
 }
 
 .cta-wrapper .bg img {
-	width: 350px;
+	width: 440px;
 	opacity: 0.1;
 	transform: rotate(75deg);
 
@@ -4562,7 +4562,7 @@ align-items: center;
 	align-items: center;
 	box-shadow: 0 1px 45px 0 rgba(255, 146, 47, 0.08), 0 4px 357px 0 rgba(255, 146, 47, 0.15);
 	background: #fff;
-	gap: 35px;
+	gap: 25px;
 	border-radius: 15px;
 	padding: 20px 30px;
 	margin: 15px 0;
@@ -4573,9 +4573,10 @@ align-items: center;
 	transform: translateY(-5px);
 }
 
-.enterprise-container .enterprise-box img{
-	width: 40px;
-}
+.enterprise-container .enterprise-box img {
+	width: 50px;
+	min-width: 50px;
+  }
 .enterprise-container .enterprise-box-cont h4{
 	font-weight: 400;
 font-size: 18px;
@@ -4624,6 +4625,58 @@ margin: 0 auto
 	margin:55px 0 0;
   }
 
+
+
+
+
+  /* privacy policy page  */
+
+  .privecy-container{
+	padding: 70px 0;
+  }
+  .pricacy-sec{
+margin-bottom: 40px;
+  }
+
+  .pricacy-sec h4{
+	font-size: 24px;
+	color: #fff;
+	margin-bottom: 20px;
+	font-weight: 700;
+  }
+  .pricacy-sec h5{
+	font-size: 20px;
+  color: #e0aa46;
+  margin-bottom: 15px;
+  font-weight: 600;
+  }
+  .pricacy-sec p,
+	.pricacy-sec ul li{
+	line-height: 26px;
+  }
+  .pricacy-sec a{
+color: #e0aa46;
+font-weight: 400;
+font-style: italic;
+  }
+  .pricacy-sec ul{
+	padding: 0;
+	list-style-type: none;
+  }
+  .pricacy-sec ul li{
+	margin-bottom: 10px;
+	position: relative;
+	padding-left: 25px;
+  }
+  .pricacy-sec ul li::before{
+	content: "↳";
+	position: absolute;
+	color: #fbad1cab;
+	left: 0;
+	top: 0;
+	font-size: 18px;
+  }
+  /* privacy policy page  */
 @media screen and (max-width:1400px) {
 	.nsd-menu-overlay {
 		padding-top: 160px;
@@ -4834,6 +4887,9 @@ margin: 0 auto
 	  .panel-main-custom .tow-phase-div img {
 		height: 450px;
 	  }
+	  .privecy-container {
+		padding:50px 0 30px;
+	  }
 }
 
 @media screen and (max-width:1100px) {
@@ -5001,6 +5057,13 @@ margin: 0 auto
 	  }
 	  .serv-point-head-custom-manage .serv-point-head p {
 		font-size: 15px;
+	  }
+	  .enterprise-img{
+		margin-top: 50px;
+	}
+	.pricacy-sec h4 {
+		font-size: 22px;
+		margin-bottom: 15px;
 	  }
 
 }
@@ -5191,6 +5254,17 @@ margin: 0 auto
 	  .manage-service-card .web-dev-card h3 {
 		font-size: 22px;
 	  }
+	  .tech-main-section {
+		padding:
+	60px 0px 1px 0px;
+	  }
+	  .pricacy-sec h4 {
+		font-size: 20px;
+		margin-bottom: 15px;
+	  }
+	  .privecy-container {
+		padding:30px 0;
+	  }
 
 }
 
@@ -5277,6 +5351,12 @@ margin: 0 auto
 	}
 	.enterprise-container .section-title h2 {
 		font-size: 22px;
+	  }
+	  .pricacy-sec {
+		margin-bottom: 30px;
+	  }
+	  .pricacy-sec h5 {
+		font-size: 18px;
 	  }
 
 }
@@ -5475,4 +5555,7 @@ margin: 0 auto
 	.wheel__card {
 		max-width: 170px;
 	}
+	.pricacy-sec ul li {
+		padding-left: 20px;
+	  }
 }
