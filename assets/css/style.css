@@ -4581,7 +4581,7 @@ align-items: center;
 font-size: 18px;
 color: #eeb044;
 }
-.enterprise-container .enterprise-box-cont h6{
+.enterprise-container .enterprise-box-cont p{
 margin: 0;
 font-weight: 300;
 font-size: 14px;
@@ -4831,6 +4831,9 @@ margin: 0 auto
 		background-color: rgba(238, 176, 68, 0.54);
 		padding:15px;
 	  }
+	  .panel-main-custom .tow-phase-div img {
+		height: 450px;
+	  }
 }
 
 @media screen and (max-width:1100px) {
@@ -4993,6 +4996,12 @@ margin: 0 auto
 	  .bg-custom-sec {
 		padding:50px 0;
 	  }
+	  .srvc-box-img {
+		height: 250px;
+	  }
+	  .serv-point-head-custom-manage .serv-point-head p {
+		font-size: 15px;
+	  }
 
 }
 
@@ -5028,7 +5037,7 @@ margin: 0 auto
 	}
 
 	.tow-phase {
-		padding: 20px 10px;
+		padding: 20px;
 	}
 
 	.service-order {
@@ -5307,6 +5316,9 @@ margin: 0 auto
 	.serv-point-head-custom-manage .serv-point-head p {
 		font-size: 14px;
 	}
+	.srvc-box-img {
+		height: 200px;
+	  }
 }
 
 @media screen and (max-width:425px) {
