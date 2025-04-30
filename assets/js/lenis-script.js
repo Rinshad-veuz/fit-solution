@@ -468,8 +468,11 @@ $(document).ready(function () {
               items: 2
           },
           768: {
-              items: 4
+              items: 3
           },
+          992: {
+            items: 4
+        },
           1000: {
               items: 5
           },
@@ -498,9 +501,13 @@ $(document).ready(function () {
           425: {
               items: 2
           },
+         
           768: {
-              items: 4
+              items: 3
           },
+          992: {
+            items: 4
+        },
           1000: {
               items: 5
           },
