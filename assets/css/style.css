@@ -896,7 +896,7 @@ img {
 .about-st-img {
 	height: 500px;
 	width: 100%;
-	background: var(--white-color);
+	background:#292929   ;
 	padding: 5px;
 	border-radius: 10px;
 }
